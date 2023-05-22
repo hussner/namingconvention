@@ -104,7 +104,7 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 
 ## 3.0 Patterns
 
-Only standard english alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. Naming convention is relying mostly on __lowercase in all main parent resource types__ - except [VM associated resources](#user-content-3.4.3-virtual-machines) (disk/nic/ip/snapshots).
+Only standard english alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. __All characters lowercase - no exception.__
 
 ### 3.1 Conditions:
 
