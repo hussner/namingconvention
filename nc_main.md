@@ -286,7 +286,7 @@ __`gl-gal-phoebe-prod012`__
 |Notification Hubs|Microsoft<span>.</span>NotificationHubs/namespaces/notificationHubs|ntf|
 |Notification Hubs namespace|Microsoft<span>.</span>NotificationHubs/namespaces|ntfns|
 |Proximity placement group|Microsoft<span>.</span>Compute/proximityPlacementGroups|ppg|
-|Snapshot|Microsoft<span>.</span>Compute/snapshots|snap|
+|snapshot|Microsoft<span>.</span>Compute/snapshots|snap|
 |Static web app|Microsoft<span>.</span>Web/staticSites|stapp|
 |Web app|Microsoft<span>.</span>Web/sites|app|
 </details>
@@ -400,7 +400,7 @@ __`gl-sbq-ne-phoebe-prod001`__
 
 <details>
 <summary>
-[Integration - Complete list]</summary>
+[Integration abbreviations - Complete list]</summary>
 <br>
 
 |Resource|Resource provider namespace|Abbreviation|
@@ -437,7 +437,7 @@ __`pl-rg-ne-phoebe-dev005`__
 
 <details>
 <summary>
-[Management and governance - Complete list]</summary>
+[Management and governance abbreviations  - Complete list]</summary>
 <br>
 
 |Resource|Resource provider namespace|Abbreviation
@@ -639,63 +639,63 @@ __`czlsnemcwebp7kc`__
 __`plwsnecbelsd7fg`__
 __`bglsnecbelsd1xz`__
 
-##### 3.4.3.1 VM Disk & Snapshots
+##### 3.4.3.1 VM Disk & snapshots
 
 Disks that are attached to VMs can be multuple osDisks and dataDisks.
-The disks that will be associated/attached to a parent VM are under the condition that will inherit the VM name followed by dash delimiter `-`, it's scope `(os/data)` also delimited by `-` from `disk`. OS and DATA disks will gain a count index that starts at `001` and counts up with every datadisk attached. **All names extensions must be uppercase.**
+The disks that will be associated/attached to a parent VM are under the condition that will inherit the VM name followed by dash delimiter `-`, it's scope `(os/data)` also delimited by `-` from `disk`. OS and DATA disks will gain a count index that starts at `001` and counts up with every datadisk attached. **All names extensions must be lowercase.**
 
 
-`%vm_name%`-__OS-DISK001__
-`%vm_name%`-__DATA-DISK001__
+`%vm_name%`-__os-disk001__
+`%vm_name%`-__data-disk001__
 
 <details>
 <summary>
 [VM Disks Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp001`__-OS-DISK001
-__`gllsnepsrmqp001`__-DATA-DISK001
-__`gllsnepsrmqp001`__-DATA-DISK002
-__`czlsnemcwebp001`__-OS-DISK001
-__`pllsnecbelsd001`__-OS-DISK001
-__`pllsnecbelsd001`__-OS-DISK002
+__`gllsnepsrmqp6y2`__-os-disk001
+__`gllsnepsrmqp6y2`__-data-disk001
+__`gllsnepsrmqp6y2`__-data-disk002
+__`czlsnemcwebp7kc`__-os-disk001
+__`plwsnecbelsd7fg`__-os-disk001
+__`plwsnecbelsd7fg`__-os-disk002
 </details>
 <br>
 
-For Snapshots the same inheritance principle must follow. The Snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `SNAP` and a count index that starts at `001` and counts up with every snapshot created.
+For snapshots the same inheritance principle must follow. The snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `snap` and a count index that starts at `001` and counts up with every snapshot created.
 
-`%disk_name%`-__SNAP001__
-`%disk_name%`-__SNAP002__
+`%disk_name%`-__snap001__
+`%disk_name%`-__snap002__
 
 <details>
 <summary>
-[VM Disk Snapshots Examples - More]</summary>
+[VM Disk snapshots Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp001`__-OS-DISK001-SNAP001
-__`gllsnepsrmqp001`__-OS-DISK001-SNAP002
-__`gllsnepsrmqp001`__-DATA-DISK001-SNAP001
-__`gllsnepsrmqp001`__-DATA-DISK002-SNAP001
-__`czlsnemcwebp001`__-OS-DISK001-SNAP001
-__`pllsnecbelsd001`__-OS-DISK001-SNAP001
-__`pllsnecbelsd001`__-OS-DISK002-SNAP001
+__`gllsnepsrmqp6y2`__-os-disk001-snap001
+__`gllsnepsrmqp6y2`__-os-disk001-snap002
+__`gllsnepsrmqp6y2`__-data-disk001-snap001
+__`gllsnepsrmqp6y2`__-data-disk002-snap001
+__`czlsnemcwebp7kc`__-os-disk001-snap001
+__`plwsnecbelsd7fg`__-os-disk001-snap001
+__`plwsnecbelsd7fg`__-os-disk002-snap001
 </details>
 
 ##### 3.4.3.2 VM Network Interface Card
 
 Network Interface Cards that are attached/associated with VMs will follow the same inheritance theory against the parent VMs that they are being connected to followed by dash delimiter `-`, it's abbreviation `nic` and a count index that starts at `001` and counts up. 
 
-`%vm_name%`-__NIC001__
+`%vm_name%`-__nic001__
 
 <details>
 <summary>
 [VM NIC Examples - More]</summary>
 <br>
 
-__`glssnephoebp001`-NIC001__
-__`glssnephoebp001`-NIC002__
-__`glssnephoebp001`-NIC003__
-__`cswsnephoebp003`-NIC001__
+__`plwsnecbelsd7fg`-nic001__
+__`plwsnecbelsd7fg`-nic002__
+__`plwsnecbelsd7fg`-nic003__
+__`czlsnemcwebp7kc`-nic001__
 </details>
 
 
