@@ -111,7 +111,7 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 | Darevo | `drv` |
 | EduNet | `edn` |
 | Brahms | `brh` |
-| Multiple Clients| `shared`|
+| Multiple Clients/Managed service| `shared`|
 | TBD | 
 
 ## 3.0 Patterns
@@ -152,14 +152,16 @@ This table is valid as __generic pattern__ and it can be used for __AI + machine
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | The region where the resource is deployed. |
 | \#6 | Delimiter |   | 1 dash | `-` |  |
+| \#5 | Client/Customer| `yes` | [enumeration](#user-content-2.4-location-enumerations) | `drm` | The region where the resource is deployed. |
+| \#6 | Delimiter |   | 1 dash | `-` |  |
 | \#7 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
 | \#10| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
 
-__`gl-rg-phoebe-prod001`__
-__`gl-mysql-phoebe-prod001`__
-__`gl-aks-phoebe-prod001`__
+__`gl-rg-drm-phoebe-prod001`__
+__`gl-mysql-ame-phoebe-prod001`__
+__`gl-aks-shared-phoebe-prod001`__
 
 
 ### 3.3 Examples
@@ -355,14 +357,16 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
+| \#7 | Customer| `yes` | [2.10 Customer/Client](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#6 | Delimiter |   | 1 dash | `-` |  |
 | \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
 
-__`gl-sql-ne-phoebe-prod001`__
-__`gl-sqldb-ne-phoebe-prod001`__
-__`gl-mysql-ne-phoebe-dev003`__
+__`gl-sql-ne-shared-phoebe-prod001`__
+__`gl-sqldb-ne-drm-phoebe-prod001`__
+__`gl-mysql-ne-ame-phoebe-dev003`__
 
 <details>
 <summary>
