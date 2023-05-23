@@ -694,7 +694,7 @@ See [__Azure Container Registry__](#excr).
 Resources that are attached/associated to VMs needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources with __upper case letters__. 
 
 `%vm_name%`-__OS-DISK001__
-`%vm_name%`-__DATA-DISK001__SNAP
+`%vm_name%`-__DATA-DISK001__
 
 <details>
 <summary>
