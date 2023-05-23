@@ -693,6 +693,7 @@ See [__Azure Container Registry__](#excr).
 
 Resources that are attached/associated to VMs needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources with __upper case letters__. 
 
+__
 `%vm_name%`-__OS-DISK001__
 `%vm_name%`-__DATA-DISK001__
 
@@ -701,12 +702,12 @@ Resources that are attached/associated to VMs needs to have good visibility espe
 [VM Disks Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-OS-DISK001
-__`gllsnepsrmqp6y2`__-DATA-DISK001
-__`gllsnepsrmqp6y2`__-DATA-DISK002
-__`czlsnemcwebp7kc`__-OS-DISK001
-__`plwsnecbelsd7fg`__-OS-DISK001
-__`plwsnecbelsd7fg`__-OS-DISK002
+__`gllsneps1rmqp01`__-OS-DISK001
+__`gllsneps1rmqp01`__-DATA-DISK001
+__`gllsneps1rmqp01`__-DATA-DISK002
+__`czlsnemc1webp01`__-OS-DISK001
+__`plwsnecb1elsd03`__-OS-DISK001
+__`plwsnecb1elsd03`__-OS-DISK002
 </details>
 <br>
 
@@ -720,13 +721,13 @@ For snapshots the same inheritance principle must follow. The snapshots __do not
 [VM Disk snapshots Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP001
-__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP002
-__`gllsnepsrmqp6y2`__-DATA-DISK001-SNAP001
-__`gllsnepsrmqp6y2`__-DATA-DISK002-SNAP001
-__`czlsnemcwebp7kc`__-OS-DISK001-SNAP001
-__`plwsnecbelsd7fg`__-OS-DISK001-SNAP001
-__`plwsnecbelsd7fg`__-OS-DISK002-SNAP001
+__`gllsneps1rmqp01`__-OS-DISK001-SNAP001
+__`gllsneps1rmqp01`__-OS-DISK001-SNAP002
+__`gllsneps1rmqp01`__-DATA-DISK001-SNAP001
+__`gllsneps1rmqp01`__-DATA-DISK002-SNAP001
+__`czlsnemc1webp01`__-OS-DISK001-SNAP001
+__`plwsnecb1elsd03`__-OS-DISK001-SNAP001
+__`plwsnecb1elsd03`__-OS-DISK002-SNAP001
 </details>
 
 ##### 3.4.7.2 VM Network Interface Card
@@ -740,10 +741,10 @@ Network Interface Cards that are attached/associated with VMs will follow the sa
 [VM NIC Examples - More]</summary>
 <br>
 
-__`plwsnecbelsd7fg`-NIC001__
-__`plwsnecbelsd7fg`-NIC002__
-__`plwsnecbelsd7fg`-NIC003__
-__`czlsnemcwebp7kc`-NIC001__
+__`plwsnecb1elsd03`-NIC001__
+__`plwsnecb1elsd03`-NIC002__
+__`plwsnecb1elsd03`-NIC003__
+__`czlsnemc1webp01`-NIC001__
 </details>
 
 ___
