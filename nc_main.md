@@ -286,7 +286,7 @@ __`gl-gal-phoebe-prod012`__
 |Notification Hubs|Microsoft<span>.</span>NotificationHubs/namespaces/notificationHubs|ntf|
 |Notification Hubs namespace|Microsoft<span>.</span>NotificationHubs/namespaces|ntfns|
 |Proximity placement group|Microsoft<span>.</span>Compute/proximityPlacementGroups|ppg|
-|snapshot|Microsoft<span>.</span>Compute/snapshots|snap|
+|SNAPshot|Microsoft<span>.</span>Compute/snapshots|SNAP|
 |Static web app|Microsoft<span>.</span>Web/staticSites|stapp|
 |Web app|Microsoft<span>.</span>Web/sites|app|
 </details>
@@ -633,7 +633,7 @@ __`czlsnemc1webp01`__
 __`plwsnecb1elsd03`__
 __`bglsnecb1elsd23`__
 
-
+___
 
 #### 3.4.4 Storage accounts
 
@@ -687,63 +687,63 @@ ___
 
 See [__Azure Container Registry__](#excr).
 
-#### 3.4.7 Dependend resources
+#### 3.4.7 Dependent resources
 
 ##### 3.4.7.1 VM Associations
 
-Resources that are attached/associated to VMs can have different properties.
+Resources that are attached/associated to VMs needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources with __upper case letters__. 
 
-`%vm_name%`-__os-disk001__
-`%vm_name%`-__data-disk001__
+`%vm_name%`-__OS-DISK001__
+`%vm_name%`-__DATA-DISK001__SNAP
 
 <details>
 <summary>
 [VM Disks Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-os-disk001
-__`gllsnepsrmqp6y2`__-data-disk001
-__`gllsnepsrmqp6y2`__-data-disk002
-__`czlsnemcwebp7kc`__-os-disk001
-__`plwsnecbelsd7fg`__-os-disk001
-__`plwsnecbelsd7fg`__-os-disk002
+__`gllsnepsrmqp6y2`__-OS-DISK001
+__`gllsnepsrmqp6y2`__-DATA-DISK001
+__`gllsnepsrmqp6y2`__-DATA-DISK002
+__`czlsnemcwebp7kc`__-OS-DISK001
+__`plwsnecbelsd7fg`__-OS-DISK001
+__`plwsnecbelsd7fg`__-OS-DISK002
 </details>
 <br>
 
-For snapshots the same inheritance principle must follow. The snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `snap` and a count index that starts at `001` and counts up with every snapshot created.
+For snapshots the same inheritance principle must follow. The snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `SNAP` and a count index that starts at `001` and counts up with every SNAPshot created.
 
-`%disk_name%`-__snap001__
-`%disk_name%`-__snap002__
+`%disk_name%`-__SNAP001__
+`%disk_name%`-__SNAP002__
 
 <details>
 <summary>
 [VM Disk snapshots Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-os-disk001-snap001
-__`gllsnepsrmqp6y2`__-os-disk001-snap002
-__`gllsnepsrmqp6y2`__-data-disk001-snap001
-__`gllsnepsrmqp6y2`__-data-disk002-snap001
-__`czlsnemcwebp7kc`__-os-disk001-snap001
-__`plwsnecbelsd7fg`__-os-disk001-snap001
-__`plwsnecbelsd7fg`__-os-disk002-snap001
+__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP001
+__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP002
+__`gllsnepsrmqp6y2`__-DATA-DISK001-SNAP001
+__`gllsnepsrmqp6y2`__-DATA-DISK002-SNAP001
+__`czlsnemcwebp7kc`__-OS-DISK001-SNAP001
+__`plwsnecbelsd7fg`__-OS-DISK001-SNAP001
+__`plwsnecbelsd7fg`__-OS-DISK002-SNAP001
 </details>
 
 ##### 3.4.7.2 VM Network Interface Card
 
 Network Interface Cards that are attached/associated with VMs will follow the same inheritance theory against the parent VMs that they are being connected to followed by dash delimiter `-`, it's abbreviation `nic` and a count index that starts at `001` and counts up. 
 
-`%vm_name%`-__nic001__
+`%vm_name%`-__NIC001__
 
 <details>
 <summary>
 [VM NIC Examples - More]</summary>
 <br>
 
-__`plwsnecbelsd7fg`-nic001__
-__`plwsnecbelsd7fg`-nic002__
-__`plwsnecbelsd7fg`-nic003__
-__`czlsnemcwebp7kc`-nic001__
+__`plwsnecbelsd7fg`-NIC001__
+__`plwsnecbelsd7fg`-NIC002__
+__`plwsnecbelsd7fg`-NIC003__
+__`czlsnemcwebp7kc`-NIC001__
 </details>
 
 ___
