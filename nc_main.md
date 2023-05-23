@@ -658,7 +658,7 @@ __Contitions:__
 
 __`glstdiagnephoebep001`__
 __`glstnephoebep001`__
-__`glstnephoebet003`__
+__`czlsnemc1webp01`__
 __`csstiagnephoebet012`__
 __`prstnephoebed003`__
 
@@ -693,7 +693,8 @@ See [__Azure Container Registry__](#excr).
 
 Resources that are attached/associated to VMs needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources with __upper case letters__. 
 
-__
+###### 3.4.7.1.1 Disks
+
 `%vm_name%`-__OS-DISK001__
 `%vm_name%`-__DATA-DISK001__
 
@@ -702,14 +703,16 @@ __
 [VM Disks Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-OS-DISK001
-__`gllsnepsrmqp6y2`__-DATA-DISK001
-__`gllsnepsrmqp6y2`__-DATA-DISK002
-__`czlsnemcwebp7kc`__-OS-DISK001
-__`plwsnecbelsd7fg`__-OS-DISK001
-__`plwsnecbelsd7fg`__-OS-DISK002
+__`czlsnemc1webp01`__-OS-DISK001
+__`czlsnemc1webp01`__-DATA-DISK001
+__`czlsnemc1webp01`__-DATA-DISK002
+__`plwsnecb2elsd03`__-OS-DISK001
+__`gllsneps1rmqp01`__-OS-DISK001
+__`gllsneps1rmqp01`__-OS-DISK002
 </details>
 <br>
+
+###### 3.4.7.1.2 Snapshots
 
 For snapshots the same inheritance principle must follow. The snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `SNAP` and a count index that starts at `001` and counts up with every SNAPshot created.
 
@@ -721,16 +724,16 @@ For snapshots the same inheritance principle must follow. The snapshots __do not
 [VM Disk snapshots Examples - More]</summary>
 <br>
 
-__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP001
-__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP002
-__`gllsnepsrmqp6y2`__-DATA-DISK001-SNAP001
-__`gllsnepsrmqp6y2`__-DATA-DISK002-SNAP001
-__`czlsnemcwebp7kc`__-OS-DISK001-SNAP001
-__`plwsnecbelsd7fg`__-OS-DISK001-SNAP001
-__`plwsnecbelsd7fg`__-OS-DISK002-SNAP001
+__`czlsnemc1webp01`__-OS-DISK001-SNAP001
+__`czlsnemc1webp01`__-OS-DISK001-SNAP002
+__`czlsnemc1webp01`__-DATA-DISK001-SNAP001
+__`czlsnemc1webp01`__-DATA-DISK002-SNAP001
+__`plwsnecb2elsd03`__-OS-DISK001-SNAP001
+__`gllsneps1rmqp01`__-OS-DISK001-SNAP001
+__`gllsneps1rmqp01`__-OS-DISK002-SNAP001
 </details>
 
-##### 3.4.7.2 VM Network Interface Card
+###### 3.4.7.1.2 Network Interface Card
 
 Network Interface Cards that are attached/associated with VMs will follow the same inheritance theory against the parent VMs that they are being connected to followed by dash delimiter `-`, it's abbreviation `nic` and a count index that starts at `001` and counts up. 
 
@@ -741,11 +744,13 @@ Network Interface Cards that are attached/associated with VMs will follow the sa
 [VM NIC Examples - More]</summary>
 <br>
 
-__`plwsnecbelsd7fg`-NIC001__
-__`plwsnecbelsd7fg`-NIC002__
-__`plwsnecbelsd7fg`-NIC003__
-__`czlsnemcwebp7kc`-NIC001__
+__`gllsneps1rmqp01`-NIC001__
+__`gllsneps1rmqp01`-NIC002__
+__`gllsneps1rmqp01`-NIC003__
+__`plwsnecb2elsd03`-NIC001__
 </details>
+
+#### 3.4.8 VM Network Interface Card
 
 ___
 
@@ -766,18 +771,7 @@ Tags will be applied to __all resources__. Mandatory tags needs to be applied to
 |description|Small project description/scope|`testing terraform for Phoebe`|no|
 |role|description of service role|`consul`<br>`elastic`<br>`web server`<br>`rabbitmq`<br>`java framework`<br>`etc`|no|
 
-
-
 <br>
-
-- __Resource object__ standalone optional tags
-
-Each resource can have optional tags that can be added in addition to the mandatory tags.
-
-|__Tag Key__|__Value Format__|__Example__|__Mandatory__|
-|--|--|--|--|
-|country|[Geographical Location ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2)|RO|no|
-|role|description of service role|consul<br>elastic<br>web server<br>rabbitmq<br>java framework<br>etc|no|
 
 ____
 
