@@ -101,6 +101,18 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 | Redis | `red` |
 | TBD | 
 
+### 2.10 Customer/Client enumeration
+
+| __Full name__ | __Abbreviation__ |
+|--|--|
+| HTSS| `htss` |
+| DrMax| `drm` |
+| Amethyst | `ame` |
+| Darevo | `drv` |
+| EduNet | `edn` |
+| Brahms | `brh` |
+| Multiple Clients| `shared`|
+| TBD | 
 
 ## 3.0 Patterns
 
