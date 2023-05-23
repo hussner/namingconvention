@@ -628,9 +628,9 @@ __Contitions:__
 | \#8| Instance count | `yes` | numeric string | 2 | `01` | 
 
 __`gllsneps1rmqp01`__
-__`rowsnesh1cslp02`__
+__`rowsnesh5cslp02`__
 __`czlsnemc1webp01`__
-__`plwsnecb1elsd03`__
+__`plwsnecb2elsd03`__
 __`bglsnecb1elsd23`__
 
 ___
@@ -702,12 +702,12 @@ __
 [VM Disks Examples - More]</summary>
 <br>
 
-__`gllsneps1rmqp01`__-OS-DISK001
-__`gllsneps1rmqp01`__-DATA-DISK001
-__`gllsneps1rmqp01`__-DATA-DISK002
-__`czlsnemc1webp01`__-OS-DISK001
-__`plwsnecb1elsd03`__-OS-DISK001
-__`plwsnecb1elsd03`__-OS-DISK002
+__`gllsnepsrmqp6y2`__-OS-DISK001
+__`gllsnepsrmqp6y2`__-DATA-DISK001
+__`gllsnepsrmqp6y2`__-DATA-DISK002
+__`czlsnemcwebp7kc`__-OS-DISK001
+__`plwsnecbelsd7fg`__-OS-DISK001
+__`plwsnecbelsd7fg`__-OS-DISK002
 </details>
 <br>
 
@@ -721,13 +721,13 @@ For snapshots the same inheritance principle must follow. The snapshots __do not
 [VM Disk snapshots Examples - More]</summary>
 <br>
 
-__`gllsneps1rmqp01`__-OS-DISK001-SNAP001
-__`gllsneps1rmqp01`__-OS-DISK001-SNAP002
-__`gllsneps1rmqp01`__-DATA-DISK001-SNAP001
-__`gllsneps1rmqp01`__-DATA-DISK002-SNAP001
-__`czlsnemc1webp01`__-OS-DISK001-SNAP001
-__`plwsnecb1elsd03`__-OS-DISK001-SNAP001
-__`plwsnecb1elsd03`__-OS-DISK002-SNAP001
+__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP001
+__`gllsnepsrmqp6y2`__-OS-DISK001-SNAP002
+__`gllsnepsrmqp6y2`__-DATA-DISK001-SNAP001
+__`gllsnepsrmqp6y2`__-DATA-DISK002-SNAP001
+__`czlsnemcwebp7kc`__-OS-DISK001-SNAP001
+__`plwsnecbelsd7fg`__-OS-DISK001-SNAP001
+__`plwsnecbelsd7fg`__-OS-DISK002-SNAP001
 </details>
 
 ##### 3.4.7.2 VM Network Interface Card
@@ -741,40 +741,31 @@ Network Interface Cards that are attached/associated with VMs will follow the sa
 [VM NIC Examples - More]</summary>
 <br>
 
-__`plwsnecb1elsd03`-NIC001__
-__`plwsnecb1elsd03`-NIC002__
-__`plwsnecb1elsd03`-NIC003__
-__`czlsnemc1webp01`-NIC001__
+__`plwsnecbelsd7fg`-NIC001__
+__`plwsnecbelsd7fg`-NIC002__
+__`plwsnecbelsd7fg`-NIC003__
+__`czlsnemcwebp7kc`-NIC001__
 </details>
 
 ___
 
 ### 4.0 Tagging strategy
 
-Tags will be applied to subscription and resource group level. Subscription tags will be stand-alone tagging configuration while Resource Grup mandatory tags will be propagated to each resource inside of it (policies will take care of the propagation). Each resource can have optional tags. Tagging strategy is following the model below:
-
-- __Subscription__ tagging model
+Tags will be applied to __all resources__. Mandatory tags needs to be applied to every resources. Optional tags can be added in addition to the mandatory ones, as needed. Tagging strategy is being described in the table below:
 
 |__Tag Key__|__Value Format__|__Example__|__Mandatory__|
 |--|--|--|--|
-|costCenter|[2.2 Country Code enumerations](#user-content-2.3-country-enumerations---iso-3166-alpha-2)|Product Development|yes|
-|projectName|string|Phoebe|yes|
-|projectID|project identificator|HTSS|yes|
-|environment|[2.4 Environment enumerations](#user-content-2.5-environment-enumerations)|PROD|yes|
-|owner|AAD principal name|john.doe@htss.ro|yes|
+|country| [2.3 Country short](#user-content-2.3-country-enumerations---iso-3166-alpha-2)|`ro`|yes|
+|costCenter|[2.2 Business Unit](#user-content-2.2-business-unit-enumerations) short form|`prd`|yes|
+|projectName|string|`Phoebe`|yes|
+|projectID|project identificator|`HTSS`|yes|
+|environment|[2.4 Environment enumerations](#user-content-2.5-environment-enumerations)|`prod`|yes|
+|owner|AAD principal name|`john.doe@htss.ro`|yes|
+|projectName|string|`Phoebe`|yes|
+|deployment|string|`terraform`<br>`clickops`|yes|
+|description|Small project description/scope|`testing terraform for Phoebe`|no|
+|role|description of service role|`consul`<br>`elastic`<br>`web server`<br>`rabbitmq`<br>`java framework`<br>`etc`|no|
 
-<br>
-
-- __Resource Group__ tagging model
-
-|__Tag Key__|__Value Format__|__Example__|__Mandatory__|
-|--|--|--|--|
-|projectName|string|Phoebe|yes|
-|projectID|project identificator|HTSS|yes|
-|bussinessUnit|[2.2 Business Unit](#user-content-2.2-business-unit-enumerations) - short|csd|yes|
-|environment|[2.5 Environment enumerations](#user-content-2.5-environment-enumerations)|PROD|yes|
-|owner|AAD principal name|john.doe@htss.ro|yes|
-|description|Small project description/scope|testing terraform for Phoebe|yes|
 
 
 <br>
