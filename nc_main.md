@@ -140,7 +140,7 @@ This table is valid as __generic pattern__ and it can be used for __AI + machine
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | The region where the resource is deployed. |
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
+| \#7 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
 | \#10| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
@@ -162,7 +162,7 @@ In the example tables below can be found the most common resources and will guid
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -193,7 +193,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#9 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -252,7 +252,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -303,7 +303,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -343,7 +343,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -391,7 +391,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -426,7 +426,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -469,7 +469,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -543,7 +543,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#8 | Delimiter |  | 1 dash | `-` |  |
 | \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#10| Instance | `yes` | number | `001` | 
@@ -592,7 +592,7 @@ _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subsc
 | \#6 | Delimiter |  | 1 dash | `-` |  |
 | \#7 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
-| \#9 | Project, application or service name | `yes` | letters and numbers | `phoebe` | 
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -615,35 +615,83 @@ __Contitions:__
 - Length is 15 characters max
 - Abbbreviations will be consumed from [2.6 VM type enumerations](#user-content-2.6-vm-type-enumerations)
 - Each naming order will have limited number of characters as shown in example table below
-- No instance counts
-- For unicity we're be using a string generator with following properties:
->-   startWith = numeric (0..9)
->-   length  = 3
->-   special = false
->-   upper   = false
->-   numeric = true
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
 | \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `ww` - Workstation<br>`ws` - Windows Server<br>`ls` - Linux Server<br>`ss` - Scale Set<br>`us` - Unix Server<br>`wd` - Windows virtual desktop<br>`cn` - Container | 2 | `ls` |
 | \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project short form | `yes` | [project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ | 
-| \#5 | Project short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
-| \#6 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#7| String generator | `yes` | string | 3 | `6y2`<br>`8va`<br>`7kc`<br>`7fg`<br>`1xz` | 
+| \#4 | Project short form | `yes` | [project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
+| \#5 | Project count | `yes` | numeric string | 1 | `1` |
+| \#6 | Role short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
+| \#7 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#8| Instance count | `yes` | numeric string | 2 | `01` | 
 
-__`gllsnepsrmqp6y2`__
-__`rowsneshcslp8va`__
-__`czlsnemcwebp7kc`__
-__`plwsnecbelsd7fg`__
-__`bglsnecbelsd1xz`__
+__`gllsneps1rmqp01`__
+__`rowsnesh1cslp02`__
+__`czlsnemc1webp01`__
+__`plwsnecb1elsd03`__
+__`bglsnecb1elsd23`__
 
-##### 3.4.3.1 VM Disk & snapshots
 
-Disks that are attached to VMs can be multuple osDisks and dataDisks.
-The disks that will be associated/attached to a parent VM are under the condition that will inherit the VM name followed by dash delimiter `-`, it's scope `(os/data)` also delimited by `-` from `disk`. OS and DATA disks will gain a count index that starts at `001` and counts up with every datadisk attached. **All names extensions must be lowercase.**
 
+#### 3.4.4 Storage accounts
+
+Storage account family do not follow generic pattern as they have naming length restrictions imposed by Microsoft. Global scoped Storage Accounts must be 24 characters. Given this condition we are going to apply the same naming policies for storage resources in the following table.
+
+__Contitions:__
+- Only standard english alphanumeric characters
+- Strictly lowercase in all resource types
+- Can't use spaces, control characters, or these characters:
+>- `~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \ | ; : . ' " , < > / ?`
+- Length is 24 characters max
+- Each naming order will have limited number of characters as shown in example table below
+
+| __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
+|--|--|--|--|--|--|
+| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
+| \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `stdiag` |
+| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
+| \#4 | Project | `yes` | letters and numbers | 10-14 | __`phoebe`__ | 
+| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#6| Instance | `yes` | number | 3 | `001` | 
+
+__`glstdiagnephoebep001`__
+__`glstnephoebep001`__
+__`glstnephoebet003`__
+__`csstiagnephoebet012`__
+__`prstnephoebed003`__
+
+___
+
+#### 3.4.5 Key Vaults
+
+Key Vaults are following the same conditions as [Storage Accounts](#user-content-3.4.4-storage-accounts), the resource naming needs to be 24 characters long imposed by Microsoft.
+
+| __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
+|--|--|--|--|--|--|
+| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
+| \#2 | (Common) Resource types | `yes` | `kv` - Key Vault | 2 | `kv` |
+| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
+| \#4 | Project | `yes` | letters and numbers | 14 | __`phoebe`__ | 
+| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#6| Instance | `yes` | number | 3 | `001` | 
+
+__`glkvnephoebep001`__
+__`cskvnephoebed003`__
+__`iakvnephoebet002`__
+
+___
+
+#### 3.4.6 Azure Container Registries
+
+See [__Azure Container Registry__](#excr).
+
+#### 3.4.7 Dependend resources
+
+##### 3.4.7.1 VM Associations
+
+Resources that are attached/associated to VMs can have different properties.
 
 `%vm_name%`-__os-disk001__
 `%vm_name%`-__data-disk001__
@@ -681,7 +729,7 @@ __`plwsnecbelsd7fg`__-os-disk001-snap001
 __`plwsnecbelsd7fg`__-os-disk002-snap001
 </details>
 
-##### 3.4.3.2 VM Network Interface Card
+##### 3.4.7.2 VM Network Interface Card
 
 Network Interface Cards that are attached/associated with VMs will follow the same inheritance theory against the parent VMs that they are being connected to followed by dash delimiter `-`, it's abbreviation `nic` and a count index that starts at `001` and counts up. 
 
@@ -698,58 +746,6 @@ __`plwsnecbelsd7fg`-nic003__
 __`czlsnemcwebp7kc`-nic001__
 </details>
 
-
-#### 3.4.4 Storage accounts
-
-Storage account family do not follow generic pattern as they have naming length restrictions imposed by Microsoft. Global scoped Storage Accounts must be 24 characters. Given this condition we are going to apply the same naming policies for storage resources in the following table.
-
-__Contitions:__
-- Only standard english alphanumeric characters
-- Strictly lowercase in all resource types
-- Can't use spaces, control characters, or these characters:
->- `~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \ | ; : . ' " , < > / ?`
-- Length is 24 characters max
-- Each naming order will have limited number of characters as shown in example table below
-
-| __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
-|--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
-| \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `stdiag` |
-| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project, application or service name | `yes` | letters and numbers | 10-14 | __`phoebe`__ | 
-| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#6| Instance | `yes` | number | 3 | `001` | 
-
-__`glstdiagnephoebep001`__
-__`glstnephoebep001`__
-__`glstnephoebet003`__
-__`csstiagnephoebet012`__
-__`prstnephoebed003`__
-
-___
-
-#### 3.4.5 Key Vaults
-
-Key Vaults are following the same conditions as [Storage Accounts](#user-content-3.4.4-storage-accounts), the resource naming needs to be 24 characters long imposed by Microsoft.
-
-| __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
-|--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
-| \#2 | (Common) Resource types | `yes` | `kv` - Key Vault | 2 | `kv` |
-| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project, application or service name | `yes` | letters and numbers | 14 | __`phoebe`__ | 
-| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#6| Instance | `yes` | number | 3 | `001` | 
-
-__`glkvnephoebep001`__
-__`cskvnephoebed003`__
-__`iakvnephoebet002`__
-
-___
-
-#### 3.4.6 Azure Container Registries
-
-See [__Azure Container Registry__](#excr).
 ___
 
 ### 4.0 Tagging strategy
