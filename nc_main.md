@@ -824,7 +824,13 @@ __`glcrwesharedphoebeprod004`-DNSGROUP001__
 
 ##### 3.4.7.3 Public IPs
 
-Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP that is known that it's lifecycle will be strongly tied to it's original resource can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern.
+Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to it's original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern:
+
+`gl-`__pip__`-ne-shared-phoebe-prod001`
+`gl-pip-ne-drm-phoebe-prod001`
+`gl-pip-ne-ame-phoebe-dev003`
+
+For every other deployments, we're gonna treat it as dependent resource and will follow the pattern below:
 
 `%parent_name%`-__PIP001__
 
