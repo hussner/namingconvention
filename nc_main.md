@@ -152,7 +152,7 @@ This table is valid as __generic pattern__ and it can be used for __AI + machine
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | The region where the resource is deployed. |
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Client/Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `drm` | The customer that consumes the product/project/resource. |
+| \#7 | Client/Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `drm` | The customer that consumes the product/project/resource. |
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -176,7 +176,7 @@ In the following example tables can be found the most common resources and will 
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -209,7 +209,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -270,7 +270,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -323,7 +323,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -365,7 +365,7 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne`  | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -415,11 +415,11 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
 __`gl-sbq-ne-shared-phoebe-prod001`__
@@ -452,11 +452,11 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
 __`gl-appi-ne-shared-phoebe-prod001`__
@@ -493,11 +493,11 @@ ___
 |--|--|--|--|--|
 | \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
-| \#3 | (Common) Resource types | `yes` | `vnet` - Virtual Network<br>`snet` - Subnet<br>`pep` - Private Endpoint<br>`pip` - Public IP Address<br>`lbi` - Internal Load Balancer<br>`lb` - General Load Balancer<br> `lbe` - External Load Balancer<br>`nsg` - Network Security Group<br>`lgw` - Local Network Gateway <br>`vgw` - Virtual Network Gateway<br>`rt` - Route Table | `vnet` |
+| \#3 | (Common) Resource types | `yes` | `vnet` - Virtual Network<br>`snet` - Subnet<br>`pep` - Private Endpoint<br><a id="pip"></a>`pip` - Public IP Address<br>`lbi` - Internal Load Balancer<br>`lb` - General Load Balancer<br> `lbe` - External Load Balancer<br>`nsg` - Network Security Group<br>`lgw` - Local Network Gateway <br>`vgw` - Virtual Network Gateway<br>`rt` - Route Table | `vnet` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -506,8 +506,9 @@ ___
 
 __`gl-vnet-ne-shared-phoebe-prod001`__
 __`gl-lbi-ne-drm-phoebe-prod001`__
-__`gl-snet-ne-ame-phoebe-dev003`__
-__`cs-nsg-ne-edu-phoebe-prod001`__
+__`cz-snet-ne-ame-phoebe-dev003`__
+__`gl_pip_ne_htss-phoebe-prod005`__
+__`ro-nsg-ne-edu-phoebe-prod001`__
 __`gl-udr-ne-drm-phoebe-test002`__
 
 <details>
@@ -573,11 +574,11 @@ ___
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
 __`gl-vcn-ne-shared-phoebe-prod001`__
@@ -622,7 +623,7 @@ _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subsc
 | \#4 | Delimiter |  | 1 dash | `-` |  |
 | \#5 | Billing license enumerations | `yes` | [2.6 Billing License enumerations](#user-content-2.6-billing-license-enumerations) | `ea` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `drm` | 
+| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `drm` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
@@ -657,7 +658,7 @@ __Contitions:__
 | \#4 | Project short form | `yes` | [2.8 Project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
 | \#5 | Project count | `yes` | numeric string | 1 | `1` |
 | \#6 | Role short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
-| \#7 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#7 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
 | \#8| Instance count | `yes` | numeric string | 2 | `01` | 
 
 __`gllsneps1rmqp01`__
@@ -685,9 +686,9 @@ __Contitions:__
 | \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `stdiag` |
 | \#3 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | 3-6|  `shared` | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-6|  `shared` | 
 | \#5 | Project | `yes` | letters and numbers | 4-11 | __`phoe`__ | 
-| \#6 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#6 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
 | \#7| Instance | `yes` | number | 3 | `001` | 
 
 __`glstdiagnesharedphoep001`__
@@ -706,9 +707,9 @@ Key Vaults are following the same conditions as [Storage Accounts](#user-content
 | \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `kv` - Key Vault | 2 | `kv` |
 | \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | 3-6|  `shared` | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-6|  `shared` | 
 | \#4 | Project | `yes` | letters and numbers | 8-11 | `phoebe` | 
-| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#5 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
 | \#6| Instance | `yes` | number | 3 | `001` | 
 
 __`glkvnesharedphoebep001`__
@@ -723,135 +724,101 @@ See [__Azure Container Registry__](#excr).
 
 #### 3.4.7 Dependent resources
 
+The dependent resources will follow a __different pattern__ that will be described more, with examples, in the following chapter.
+From the parent name of the resource we will only use the resource type (except VMs), project defined field, environment and instance count followed by delimiter `-` and it's type of resource using __uppercase characters__.
+
+We are planning on deploying VM with naming convention `czlsnemc1webp01` and we want to add dependent resources to it, such as disks, nic, public IPs, etc. For VMs we will only take into consideration as name, the project defined field, environment and instance count from it's parent name followed by `-` delimiter and it's type of resource.
+
+czlsnemc1**webp01**
+osDisk: webp01-__OS-DISK001__
+dataDisk1: webp01-__DATA-DISK001__
+dataDisk2: webp01-__DATA-DISK002__
+nic: webp01-__NIC001__
+pip: webp01-__PIP001__
+
+Let's asume we have a storage account named `rostnedrmphoebep001` that relies on private endpoint connection - the private endpoint is considered to be the storage account's child's resource, so the name for private endpoint in this scenario will be:
+
+`stphoebep001`__-PEP001__
+
+A different case is when the dependent resource is having a parent that is named after the generic pattern such as a Azure SQL Server named `gl-sql-ne-shared-phoebe-prod001` that needs a private endpoint connection. For this scenario we are going to take the same values along with it's delimiters included. Example:
+
+`sql-phoebe-prod001`__-PEP001__
+
+
 ##### 3.4.7.1 VM Associations
 
-Resources that are attached/associated to VMs needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources with __upper case letters__. 
+Resources that are attached/associated to VMs are being treated as dependent resources and needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources written with __upper case letters__. For the examples on VM associations we will have a VM name to use `rowsnesh5cslp02`.
 
 ###### 3.4.7.1.1 Disks
 
-`%vm_name%`-__OS-DISK001__
-`%vm_name%`-__DATA-DISK001__
-
-<details>
-<summary>
-[VM Disks Examples - More]</summary>
-<br>
-
-__`czlsnemc1webp01`__-OS-DISK001
-__`czlsnemc1webp01`__-DATA-DISK001
-__`czlsnemc1webp01`__-DATA-DISK002
-__`plwsnecb2elsd03`__-OS-DISK001
-__`gllsneps1rmqp01`__-OS-DISK001
-__`gllsneps1rmqp01`__-OS-DISK002
-</details>
-<br>
+VM Name: `rowsnesh5cslp02`
+`cslp02`-__OS-DISK001__
+`cslp02`-__DATA-DISK001__
+`cslp02`-__DATA-DISK002__
 
 ###### 3.4.7.1.2 Snapshots
 
-For snapshots the same inheritance principle must follow. The snapshots __do not inherit the VM name__ but the disk full name followed by dash delimiter `-`, it's abbreviation `SNAP` and a count index that starts at `001` and counts up with every SNAPshot created.
-
-`%disk_name%`-__SNAP001__
-`%disk_name%`-__SNAP002__
-
-<details>
-<summary>
-[VM Disk snapshots Examples - More]</summary>
-<br>
-
-__`czlsnemc1webp01`__-OS-DISK001-SNAP001
-__`czlsnemc1webp01`__-OS-DISK001-SNAP002
-__`czlsnemc1webp01`__-DATA-DISK001-SNAP001
-__`czlsnemc1webp01`__-DATA-DISK002-SNAP001
-__`plwsnecb2elsd03`__-OS-DISK001-SNAP001
-__`gllsneps1rmqp01`__-OS-DISK001-SNAP001
-__`gllsneps1rmqp01`__-OS-DISK002-SNAP001
-</details>
+VM Name: `rowsnesh5cslp02`
+`cslp02`-__OS-DISK001-SNAP001__
+`cslp02`-__DATA-DISK001-SNAP001__
+`cslp02`-__DATA-DISK002-SNAP001__
 
 ###### 3.4.7.1.2 Network Interface Card
 
-Network Interface Cards that are attached/associated with VMs will follow the same inheritance theory against the parent VMs that they are being connected to followed by dash delimiter `-`, it's abbreviation `nic` and a count index that starts at `001` and counts up. 
+VM Name: `rowsnesh5cslp02`
+`cslp02`-__NIC001__
+`cslp02`-__NIC002__
+`cslp02`-__NIC003__
 
-`%vm_name%`-__NIC001__
+###### 3.4.7.1.3 Public IPs
 
-<details>
-<summary>
-[VM NIC Examples - More]</summary>
-<br>
+Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to it's original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern.
 
-__`gllsneps1rmqp01`-NIC001__
-__`gllsneps1rmqp01`-NIC002__
-__`gllsneps1rmqp01`-NIC003__
-__`plwsnecb2elsd03`-NIC001__
-</details>
-
-##### 3.4.7.2 Private endpoints
-
-Private endpoints are also dependent resources. They need a parent resource so it will follow the same principle of inheriting it's parent name.
-
-`%parent_name%`__-PEP001__
-
-<details>
-<summary>
-[Private Endpoints Examples - More]</summary>
-<br>
-
-__`glkvnesharedphoebep001`-PEP001__
-__`gl-sql-ne-shared-phoebe-prod001`-PEP001__
-__`gl-redis-ne-ame-phoebe-dev003`-PEP001__
-</details>
-
-###### 3.4.7.2.1 Private service connections
-
-`%parent_name%`__-PRIVLNK001__
-
-<details>
-<summary>
-[Private service connections Examples - More]</summary>
-<br>
-__`glcrwesharedphoebeprod004`-PRIVLNK001__
-</details>
-
-###### 3.4.7.2.2 Private DNS zone groups
-
-`%parent_name%`__-DNSGROUP001__
-
-<details>
-<summary>
-[Private DNS zone groups Examples - More]</summary>
-<br>
-__`glcrwesharedphoebeprod004`-DNSGROUP001__
-</details>
-
-##### 3.4.7.3 Public IPs
-
-Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to it's original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern:
+- Standalone [PIP using generic pattern](#pip)
 
 `gl-`__pip__`-ne-shared-phoebe-prod001`
 `gl-pip-ne-drm-phoebe-prod001`
 `gl-pip-ne-ame-phoebe-dev003`
 
-For every other deployments, we're gonna treat it as dependent resource and will follow the pattern below:
+- Dependent PIP using defined pattern for dependent resources
 
-`%parent_name%`-__PIP001__
+VM Name: `rowsnesh5cslp02`
+`cslp02`-__PIP001__
+`cslp02`-__PIP002__
+`cslp02`-__PIP003__
 
-<details>
-<summary>
-[Public IP Examples - More]</summary>
-<br>
-__`gllsneps1rmqp01`-PIP001__
-__`gl-lbi-ne-drm-phoebe-prod001`-PIP001__
-</details>
+Load Balancer: `gl-lb-ne-drm-phoebe-prod001`
+`lb-phoebe-prod001`__-PIP001__
 
-##### 3.4.7.4 Others
+Application Gateway: ro-agw-ne-edu-phoebe-prod001
+`agw-phoebe-prod001`__-PIP001__
 
-Other dependent resources that does not have examples included are following the pattern that will inherit it's parent's name.
+##### 3.4.7.2 Private endpoints
 
-`%parent_name%`__-AbbreviationOfService+Count__
+- Storage Account: `glstnedrmphoebep001`
+__`stphoebep001`-PEP001__
+
+- Key Vault: `glkvnesharedphoebep001`
+__`kvphoebep001`-PEP001__
+
+- Databases: `gl-sql-ne-shared-phoebe-prod001`
+__`sql-phoebe-prod001`-PEP001__
+
+___NOTE:___ If the abbreviation for the dependent resources are present in the official [Azure Abbreviations for resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) it is mandatory to use it inside generated names. (e.g. - pip, pep, pl, etc)
+For instance DNS Groups that do not have an abbreviation, we can use `-DNSG`. There are also cases in which the abbreviations does not exist so we have the freedom to compose our own and define it in the table below:
+
+|__Resource type__|__Custom abbreviation__|
+|--|--|
+|DNS Group|`-DNSG001`|
+|DNS Configuration|`-DNSCONF001`|
+|Virtual Link| `-VLINK001`|
+|TBD|
+
 ___
 
 ### 4.0 Tagging strategy
 
-Tags will be applied to __all resources__. Mandatory tags needs to be applied to every resources. Optional tags can be added in addition to the mandatory ones, as needed. Tagging strategy is being described in the table below:
+Tags will be applied to __all resources__. Mandatory tags needs to be applied to every resources. Optional tags can be added in addition to the mandatory ones, as needed. Tagging strategy for mandatory tags is being described in the table below:
 
 |__Tag Key__|__Value Format__|__Example__|__Mandatory__|
 |--|--|--|--|
@@ -891,14 +858,36 @@ __VM__
 |2|2|2|2|1|3|1|3|
 
 __Others__
+
+|__gl__|__st__|__ne__|__drm__|__phoebe__|__p__|__001__|
+|--|--|--|--|--|--|--|
+|Global Service|Storage Account|North Europe|DrMax Customer|Phoebe Project|Production|Instance 001|
+|2|2-6|2|3-6|4-11|1|3|
+
 |__gl__|__kv__|__we__|__shared__|__phoebe__|__p__|__001__|
 |--|--|--|--|--|--|--|
 |Global Service|Key Vault|West Europe|shared managed service|Phoebe Project|Production|Instance 001|
+|2|2|2|3-6|8-11|1|3|
 
 #### 5.3 Dependent Resources pattern overview
-|gl|st|ne|drm|phoebe|p|001|-|PEP|001|
+- Dependent Resources for VMs pattern
+
+|~~gl~~|~~ls~~|~~ne~~|~~ps~~|~~1~~|__rmq__|__p__|__01__|-|PIP|001|
+|--|--|--|--|--|--|--|--|--|--|--|
+|N/A|N/A|N/A|N/A|N/A|Service/Role|Production|Resource Instance Count|-|Private Endpoint|Instance Count|
+
+- Dependent Resources for limited characters resources pattern
+
+|~~gl~~|st|~~ne~~|~~drm~~|__phoebe__|__p__|__001__|-|PEP|001|
 |--|--|--|--|--|--|--|--|--|--|
-|Global Service|Storage account|North Europe|Dr Max Customer|Phoebe Project|Productive system|Instance 001|>inherit|PRIVATE ENDPOINT|Count|
+|N/A|Storage Account|N/A|N/A|Phoebe Project|Productive system|Instance 001|-|Private Endpoint|Count|
+
+- Dependent Resources for Generic pattern
+
+|~~gl~~|~~-~~|__sql__|~~-~~|~~ne~~|~~-~~|~~shared~~|~~-~~|__phoebe__|__-__|__prod__|__001__|__-__|__PEP__|__001__|
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|N/A|N/A|SQL Server|N/A|N/A|N/A|N/A|N/A|Phoebe Project|-|Productive System|Instance Count|-|Private Endpoint|Instance Count|
+
 
 We are integrating our definition of naming convention with Microsoft references regarding this topic. We rely our abbreviations on Microsoft's examples to which we added some small exceptions while also taking into consideration the length limit and character restrictions.
 
