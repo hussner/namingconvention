@@ -101,7 +101,7 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 | Redis | `red` |
 | TBD | 
 
-### 2.10 Customer/Client enumeration
+### 2.10 Customer/Client enumerations
 
 | __Full name__ | __Abbreviation__ |
 |--|--|
@@ -116,7 +116,7 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 
 ## 3.0 Patterns
 
-Only standard english alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. __All characters lowercase - no exception.__
+Only standard english alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. __All characters lowercase for main non dependent resources - no exception.__
 
 ### 3.1 Conditions:
 
@@ -134,7 +134,7 @@ Only standard english alphanumeric characters [a-z], numbers [0-9] and approved 
 
 Following the given enumerations, standard abbreviations and the pattern conditions, the table below can be used as guide as generic referral for resource types that won't be defined explicitly as example in this document.
 
-__Exceptions__ will have dedicated naming convention, because of name length limitations in resource name imposed by Microsoft. Resource objects below will have their own specific table as will be shown below in the document:
+__Exceptions__ will have dedicated naming convention, because of name length limitations in resource name imposed by Microsoft. Resource objects below will have their own specific table as will be shown along in the document:
 >- __Management Groups__
 >- __Subscriptions__
 >- __VMs__
@@ -146,42 +146,44 @@ This table is valid as __generic pattern__ and it can be used for __AI + machine
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ | __Note__ |
 |--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | letters based on [abbreviation](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) | `rg` | An abbreviation that represents the type of Azure resource or asset.  |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | The region where the resource is deployed. |
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | The region where the resource is deployed. |
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#5 | Client/Customer| `yes` | [enumeration](#user-content-2.4-location-enumerations) | `drm` | The region where the resource is deployed. |
-| \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
-| \#10| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
+| \#7 | Client/Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `drm` | The customer that consumes the product/project/resource. |
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
+| \#12| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
 
-__`gl-rg-drm-phoebe-prod001`__
-__`gl-mysql-ame-phoebe-prod001`__
-__`gl-aks-shared-phoebe-prod001`__
+__`gl-rg-ne-drm-phoebe-prod001`__
+__`gl-mysql-ne-ame-phoebe-prod001`__
+__`gl-aks-ne-shared-phoebe-prod001`__
 
 
 ### 3.3 Examples
-In the example tables below can be found the most common resources and will guide you how to proceed with naming selection. Consult full list of abbreviations that can be used for `#3` Resource type at the end of each chapter.
+In the following example tables can be found the most common resources and will guide you how to proceed with naming selection. Consult full list of abbreviations that can be used for `#3` Resource type at the end of each chapter.
 
 #### 3.3.1 AI + machine learning
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `srch` - Azure Cognitive search<br>`cog` - Azure Cognitive Services<br>`mlw` - Azure Machine Learning Workspace<br>| `mlw` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-mlw-ne-phoebe-prod001`__
+__`gl-mlw-ne-shared-phoebe-prod001`__
 
 <details>
 <summary>
@@ -201,20 +203,22 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `adf` - Azure Data Factory<br>`asa` - Azure Stream Analytics<br>`evh` - Event Hub<br>`hbase` - HD Insight - HBase cluster<br>`hadoop` - HD Insight - Hadoop cluster<br>`spark` - HD Insight - Spark cluster<br>`iot` - IoT Hub<br>`pbi` - Power BI Embedded| `adf` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`gl-adf-ne-phoebe-prod001`__
-__`gl-hadoop-ne-phoebe-dev001`__
-__`cz-iot-we-phoebe-test001`__
+__`gl-adf-ne-shared-phoebe-prod001`__
+__`gl-hadoop-ne-drm-phoebe-dev001`__
+__`cz-iot-we-drm-phoebe-test001`__
 
 <details>
 <summary>
@@ -260,22 +264,24 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `app` - WebApp<br>`func` - Function App<br>`cld` - Cloud Service<br>`ntfns` - Notification Hubs Namespace<br>| `func` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12| Instance | `yes` | number | `001` | 
 
-__`ro-func-ne-phoebe-dev001`__
-__`gl-app-ne-phoebe-prod001`__
-__`gl-asp-ne-phoebe-prod001`__
-__`pl-ase-phoebe-test001`__
-__`gl-gal-phoebe-prod012`__
+__`ro-func-ne-shared-phoebe-dev001`__
+__`gl-app-ne-drm-phoebe-prod001`__
+__`gl-asp-ne-shared-phoebe-prod001`__
+__`pl-ase-ne-htss-phoebe-test001`__
+__`gl-gal-ne-drm-phoebe-prod012`__
 
 <details>
 <summary>
@@ -311,24 +317,26 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `aks` - AKS Cluster<br>`ca` - Container Apps<br>`ci` - Container Instance | `aks` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12| Instance | `yes` | number | `001` | 
 
-__`gl-aks-ne-phoebe-prod001`__
-__`ro-ca-ne-phoebe-test002`__
-__`gl-aks-ne-phoebe-dev003`__
-__`bg-ci-we-phoebe-uat005`__
+__`gl-aks-ne-shared-phoebe-prod001`__
+__`ro-ca-ne-drm-phoebe-test002`__
+__`gl-aks-ne-htss-phoebe-dev003`__
+__`bg-ci-we-ame-phoebe-uat005`__
 
 <a id="excr"></a>__Except Azure Container Registry, supports only Alphanumeric characters (no hyphens)__, we are simpy removing the hyphens:
-__`glcrwephoebeprod004`__
+__`glcrwesharedphoebeprod004`__
 
 <details>
 <summary>
@@ -351,18 +359,18 @@ ___
 #### 3.3.5 Databases
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `sql` - Azure SQL Database server<br>`sqldb` - Azure SQL Database<br>`cosmos` - Azure Cosmos DB<br> `redis` - Azure Cache for Redis<br>`mysql` - MySQL DB<br>`psql` - PostgresSQL DB <br>`sqlstrdb` - Azure SQL Server Strech DB<br>`sqlmi` - Azure SQL Managed Instance<br>| `sql`
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne`  | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Customer| `yes` | [2.10 Customer/Client](#user-content-2.10-customer/client-enumeration) | `shared` | 
-| \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12 | Instance | `yes` | number | `001` | 
 
 __`gl-sql-ne-shared-phoebe-prod001`__
 __`gl-sqldb-ne-drm-phoebe-prod001`__
@@ -401,18 +409,20 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `sb` - Service Bus<br>`sbq` - Service Bus queue<br>`sbt` - Service Bus Topic<br> | `sbq` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-sbq-ne-phoebe-prod001`__
+__`gl-sbq-ne-shared-phoebe-prod001`__
 
 <details>
 <summary>
@@ -436,20 +446,22 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `aa` - Automation account<br>`appi` - Application Insights<br>`log` - Log Analytics workspace<br>`rg` - Resource group | `appi` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-appi-ne-phoebe-prod001`__
-__`ro-law-ne-phoebe-test003`__
-__`pl-rg-ne-phoebe-dev005`__
+__`gl-appi-ne-shared-phoebe-prod001`__
+__`ro-law-ne-drm-phoebe-test003`__
+__`pl-rg-ne-ame-phoebe-dev005`__
 
 <details>
 <summary>
@@ -479,22 +491,24 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `vnet` - Virtual Network<br>`snet` - Subnet<br>`pep` - Private Endpoint<br>`pip` - Public IP Address<br>`lbi` - Internal Load Balancer<br>`lb` - General Load Balancer<br> `lbe` - External Load Balancer<br>`nsg` - Network Security Group<br>`lgw` - Local Network Gateway <br>`vgw` - Virtual Network Gateway<br>`rt` - Route Table | `vnet` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12| Instance | `yes` | number | `001` | 
 
-__`gl-vnet-ne-phoebe-prod001`__
-__`gl-lbi-ne-phoebe-prod001`__
-__`gl-snet-ne-phoebe-dev003`__
-__`cs-nsg-ne-phoebe-prod001`__
-__`gl-udr-ne-phoebe-test002`__
+__`gl-vnet-ne-shared-phoebe-prod001`__
+__`gl-lbi-ne-drm-phoebe-prod001`__
+__`gl-snet-ne-ame-phoebe-dev003`__
+__`cs-nsg-ne-edu-phoebe-prod001`__
+__`gl-udr-ne-drm-phoebe-test002`__
 
 <details>
 <summary>
@@ -553,18 +567,20 @@ ___
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | Product serves country |
 | \#2 | Delimiter |  | 1 dash | `-` |  |
 | \#3 | (Common) Resource types | `yes` | `bas` - Azure Bastion<br>`id` - Managed Identity<br>`vpng` - VPN Gateway<br>`vcn` - VPN Connection<br>`vst` - Site-to-site connection<br>`waf` - Web Application Firewall (WAF) policy<br>`wafrg` - Web Application Firewall (WAF) policy rule group | `vcn` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | `ne` | 
 | \#6 | Delimiter |   | 1 dash | `-` |  |
-| \#7 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#8 | Delimiter |  | 1 dash | `-` |  |
-| \#9 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#10| Instance | `yes` | number | `001` | 
+| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `shared` | 
+| \#8 | Delimiter |   | 1 dash | `-` |  |
+| \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter |  | 1 dash | `-` |  |
+| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-vcn-ne-phoebe-prod001`__
+__`gl-vcn-ne-shared-phoebe-prod001`__
 ___
 
 #### 3.3.10 Others [ * ]
@@ -594,28 +610,29 @@ ___
 
 #### 3.4.2 Subscriptions
 
-Unlike the general pattern, Subscriptions needs to be identified by Organization and it's Billing associated License. Subscriptions will be defined with properties from the [Organization enumeration](#user-content-2.1-organization-enumerations) and [Billing license enumerations](#user-content-2.6-billing-license-enumerations).
+Unlike the general pattern, Subscriptions needs to to have different identificators in it's name that are described and shown in table below:
 
 _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subscriptions naming convention_
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
 |--|--|--|--|--|
-| \#1 | Organization | `yes` | [enumeration](#user-content-2.1-organization-enumerations) | `htss` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
 | \#2 | Delimiter |  | 1 dash | `-` |  |
-| \#3 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | `gl` | 
+| \#3 | Resource type | `yes` | `sub` - Subscription<br> | `sub` |
 | \#4 | Delimiter |  | 1 dash | `-` |  |
-| \#5 | (Common) Resource types | `yes` | `sub` - Subscription<br> | `sub` |
-| \#6 | Delimiter |  | 1 dash | `-` |  |
-| \#7 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | `ne` | 
+| \#5 | Billing license enumerations | `yes` | [2.6 Billing License enumerations](#user-content-2.6-billing-license-enumerations) | `ea` | 
+| \#6 | Delimiter |   | 1 dash | `-` |  |
+| \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | `drm` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`htss-gl-sub-ne-phoebe-prod001`__
-__`htss-ro-sub-ne-phoebe-test001`__
-__`htss-gl-sub-we-phoebe-dev001`__
+__`gl-sub-ea-htss-phoebe-prod001`__
+__`ro-sub-csp-drm-phoebe-test001`__
+__`gl-sub-mca-ame-phoebe-dev001`__
+__`gl-sub-ea-shared-phoebe-prod001`__
 
 ___
 
@@ -634,10 +651,10 @@ __Contitions:__
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `ww` - Workstation<br>`ws` - Windows Server<br>`ls` - Linux Server<br>`ss` - Scale Set<br>`us` - Unix Server<br>`wd` - Windows virtual desktop<br>`cn` - Container | 2 | `ls` |
 | \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project short form | `yes` | [project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
+| \#4 | Project short form | `yes` | [2.8 Project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
 | \#5 | Project count | `yes` | numeric string | 1 | `1` |
 | \#6 | Role short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
 | \#7 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
@@ -665,18 +682,18 @@ __Contitions:__
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `stdiag` |
-| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project | `yes` | letters and numbers | 10-14 | __`phoebe`__ | 
-| \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#6| Instance | `yes` | number | 3 | `001` | 
+| \#3 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | 2 | `ne` | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | 3-6|  `shared` | 
+| \#5 | Project | `yes` | letters and numbers | 4-11 | __`phoe`__ | 
+| \#6 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#7| Instance | `yes` | number | 3 | `001` | 
 
-__`glstdiagnephoebep001`__
-__`glstnephoebep001`__
-__`czlsnemc1webp01`__
-__`csstiagnephoebet012`__
-__`prstnephoebed003`__
+__`glstdiagnesharedphoep001`__
+__`glstnedrmphoebep001`__
+__`rostdiagnesharedphoet012`__
+__`czdlanedrmphoebed003`__
 
 ___
 
@@ -686,16 +703,17 @@ Key Vaults are following the same conditions as [Storage Accounts](#user-content
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
-| \#1 | Country Code | `yes` | [enumeration](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
+| \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `kv` - Key Vault | 2 | `kv` |
 | \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Project | `yes` | letters and numbers | 14 | __`phoebe`__ | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumeration) | 3-6|  `shared` | 
+| \#4 | Project | `yes` | letters and numbers | 8-11 | `phoebe` | 
 | \#5 | Environment | `yes` | [enumeration](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
 | \#6| Instance | `yes` | number | 3 | `001` | 
 
-__`glkvnephoebep001`__
-__`cskvnephoebed003`__
-__`iakvnephoebet002`__
+__`glkvnesharedphoebep001`__
+__`cskvnedrmphoebed003`__
+__`iakvneamephoebet002`__
 
 ___
 
@@ -766,8 +784,63 @@ __`gllsneps1rmqp01`-NIC003__
 __`plwsnecb2elsd03`-NIC001__
 </details>
 
-#### 3.4.8 VM Network Interface Card
+##### 3.4.7.2 Private endpoints
 
+Private endpoints are also dependent resources. They need a parent resource so it will follow the same principle of inheriting it's parent name.
+
+`%parent_name%`__-PEP001__
+
+<details>
+<summary>
+[Private Endpoints Examples - More]</summary>
+<br>
+
+__`glkvnesharedphoebep001`-PEP001__
+__`gl-sql-ne-shared-phoebe-prod001`-PEP001__
+__`gl-redis-ne-ame-phoebe-dev003`-PEP001__
+</details>
+
+###### 3.4.7.2.1 Private service connections
+
+`%parent_name%`__-PRIVLNK001__
+
+<details>
+<summary>
+[Private service connections Examples - More]</summary>
+<br>
+__`glcrwesharedphoebeprod004`-PRIVLNK001__
+</details>
+
+###### 3.4.7.2.2 Private DNS zone groups
+
+`%parent_name%`__-DNSGROUP001__
+
+<details>
+<summary>
+[Private DNS zone groups Examples - More]</summary>
+<br>
+__`glcrwesharedphoebeprod004`-DNSGROUP001__
+</details>
+
+##### 3.4.7.3 Public IPs
+
+Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP that is known that it's lifecycle will be strongly tied to it's original resource can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern.
+
+`%parent_name%`-__PIP001__
+
+<details>
+<summary>
+[Public IP Examples - More]</summary>
+<br>
+__`gllsneps1rmqp01`-PIP001__
+__`gl-lbi-ne-drm-phoebe-prod001`-PIP001__
+</details>
+
+##### 3.4.7.4 Others
+
+Other dependent resources that does not have examples included are following the pattern that will inherit it's parent's name.
+
+`%parent_name%`__-AbbreviationOfService+Count__
 ___
 
 ### 4.0 Tagging strategy
@@ -776,7 +849,7 @@ Tags will be applied to __all resources__. Mandatory tags needs to be applied to
 
 |__Tag Key__|__Value Format__|__Example__|__Mandatory__|
 |--|--|--|--|
-|country| [2.3 Country short](#user-content-2.3-country-enumerations---iso-3166-alpha-2)|`ro`|yes|
+|country| [2.3 Country](#user-content-2.3-country-enumerations---iso-3166-alpha-2) short form|`ro`|yes|
 |costCenter|[2.2 Business Unit](#user-content-2.2-business-unit-enumerations) short form|`prd`|yes|
 |projectName|string|`Phoebe`|yes|
 |projectID|project identificator|`HTSS`|yes|
@@ -793,30 +866,33 @@ ____
 
 ### 5.0 Summary
 
-Most of the Azure resources in HTSS org will use the general (aka generic pattern). The principal aim of the naming convention is to give us as much information as possible just by reading the name. 
+Most of the Azure resources in HTSS org will use and rely on the general (aka generic pattern). The principal aim of the naming convention is to give us as much information as possible just by reading the name of that specific resource. 
 
-- __Generic__ pattern overview:
+#### 5.1 Generic pattern overview:
 
-|__gl__|-|__sql__|-|__ne__|-|__phoebe__|-|__prod__|__001__|
-|--|--|--|--|--|--|--|--|--|--|
-|Country Code|-|Resource type|-|Azure Region|-|Project/Service|-|Env type|Instance count|
-|Global Serice|-|SQL Server|-|North Europe|-|Phoebe Project|-|Productive System|Instance 001|
+|__gl__|-|__sql__|-|__ne__|-|__shared__|-|__phoebe__|-|__prod__|__001__|
+|--|--|--|--|--|--|--|--|--|--|--|--|
+|Country Code|-|Resource type|-|Azure Region|-|Customer|-|Project|-|Env type|Instance count|
+|Global Serice|-|SQL Server|-|North Europe|-|shared managed service|-|Phoebe Project|-|Productive System|Instance 001|
 
 
-- Exception pattern overview:
->- No dashes, character limitation in Project/Service, Env Type using short form, 15 characters VMs, 24 characters Storage Accounts & KeyVaults
+#### 5.2 Limited characters pattern overview:
 
-VM
-|__gl__|__ls__|__we__|__ps__|__csl__|__p__|__001__|
+__VM__
+|__gl__|__ls__|__we__|__ps__|1|__csl__|__p__|__001__|
+|--|--|--|--|--|--|--|--|
+|Global Service|Linux Server|West Europe|Poseidon Project|Project Count|Consul|Production|Instance 001|
+|2|2|2|2|1|3|1|3|
+
+__Others__
+|__gl__|__kv__|__we__|__shared__|__phoebe__|__p__|__001__|
 |--|--|--|--|--|--|--|
-|Global Service|Linux Server|West Europe|Poseidon Project|Consul|Production|Instance 001|
-|2|2|2|2|3|1|3
+|Global Service|Key Vault|West Europe|shared managed service|Phoebe Project|Production|Instance 001|
 
-Others
-|__gl__|__kv__|__we__|__phoebe__|__p__|__001__|
-|--|--|--|--|--|--|
-|Global Service|Key Vault|West Europe|Phoebe Project|Production|Instance 001|
-
+#### 5.3 Dependent Resources pattern overview
+|gl|st|ne|drm|phoebe|p|001|-|PEP|001|
+|--|--|--|--|--|--|--|--|--|--|
+|Global Service|Storage account|North Europe|Dr Max Customer|Phoebe Project|Productive system|Instance 001|>inherit|PRIVATE ENDPOINT|Count|
 
 We are integrating our definition of naming convention with Microsoft references regarding this topic. We rely our abbreviations on Microsoft's examples to which we added some small exceptions while also taking into consideration the length limit and character restrictions.
 
