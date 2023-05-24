@@ -2,9 +2,9 @@
 
 ## 1.0 Abstract
 
-Naming standard includes HTSS corporate part and recommended [Microsoft Naming](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) standards.
+The naming standard includes HTSS corporate part and recommended [Microsoft Naming](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) standards.
 
-Naming convention define standard names for devices, components and resources connected to network in HTSS and is mandatory for all resources entities in holding. This document will introduce our implementation with examples.
+The naming convention defines standard names for devices, components and resources connected to the network in HTSS and is mandatory for all resource entities in holding. This document will introduce our implementation with examples.
 
 An effective naming convention consists of resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it.
 
@@ -116,14 +116,14 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 
 ## 3.0 Patterns
 
-Only standard english alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. __All characters lowercase for main non dependent resources - no exception.__
+Only standard English alphanumeric characters [a-z], numbers [0-9] and approved delimiters [dash, space, comma or dot] are used for Azure objects names and attributes described in this document. No other characters are allowed. Some standard characters are not allowed on the names in Azure. __All characters lowercase for main nondependent resources - no exception.__
 
 ### 3.1 Conditions:
 
-- Only standard english alphanumeric characters
+- Only standard English alphanumeric characters
 - Lowercase in all main parent resource types
 - Valid characters & delimiters:
-> - a through z (lowercaseletters)
+> - a through z (lowercase letters)
 > - 0 through 9 (numbers)
 > - dash, space, comma or dot
 - Length and character limits - [Resource naming restrictions - Azure Resource Manager | Microsoft Docs](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules)
@@ -132,9 +132,9 @@ Only standard english alphanumeric characters [a-z], numbers [0-9] and approved 
 
 ### 3.2 General pattern
 
-Following the given enumerations, standard abbreviations and the pattern conditions, the table below can be used as guide as generic referral for resource types that won't be defined explicitly as example in this document.
+Following the given enumerations, standard abbreviations and the pattern conditions, the table below can be used as a guide on generic referral of resource types that won't be defined explicitly as an example in this document.
 
-__Exceptions__ will have dedicated naming convention, because of name length limitations in resource name imposed by Microsoft. Resource objects below will have their own specific table as will be shown along in the document:
+__Exceptions__ will have a dedicated naming convention, because of name length limitations in resource names imposed by Microsoft. Resource objects below will have their specific table as will be shown in the document:
 >- __Management Groups__
 >- __Subscriptions__
 >- __VMs__
@@ -165,7 +165,7 @@ __`gl-aks-ne-shared-phoebe-prod001`__
 
 
 ### 3.3 Examples
-In the following example tables can be found the most common resources and will guide you how to proceed with naming selection. Consult full list of abbreviations that can be used for `#3` Resource type at the end of each chapter.
+In the following example, tables can be found with the most common resources and will guide you on how to proceed with naming selection. Consult full list of abbreviations that can be used for the `#3` Resource type at the end of each chapter.
 
 #### 3.3.1 AI + machine learning
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Example__ |
@@ -335,7 +335,7 @@ __`ro-ca-ne-drm-phoebe-test002`__
 __`gl-aks-ne-htss-phoebe-dev003`__
 __`bg-ci-we-ame-phoebe-uat005`__
 
-<a id="excr"></a>__Except Azure Container Registry, supports only Alphanumeric characters (no hyphens)__, we are simpy removing the hyphens:
+<a id="excr"></a>__Except Azure Container Registry, supports only Alphanumeric characters (no hyphens)__, we are simply removing the hyphens:
 __`glcrwesharedphoebeprod004`__
 
 <details>
@@ -600,7 +600,7 @@ ___
 
 #### 3.4.1 Management Groups
 
-Management groups are not following the generic pattern as their structure is strictly defined and won't be changed for a long time period. Management group names are strings consists of lowercase english only characters, numbers and dash could be used as delimiter to enhance the readability.
+Management groups are not following the generic pattern as their structure is strictly defined and won't be changed for a long  period of time. Management group names are strings consisting of lowercase English only characters, numbers and dash could be used as delimiters to enhance readability.
 
 >- htss
 >- landing-zones
@@ -611,7 +611,7 @@ ___
 
 #### 3.4.2 Subscriptions
 
-Unlike the general pattern, Subscriptions needs to to have different identificators in it's name that are described and shown in table below:
+Unlike the general pattern, Subscriptions needs to have different identification in it's name that is described and shown in the table below:
 
 _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subscriptions naming convention_
 
@@ -639,16 +639,16 @@ ___
 
 #### 3.4.3 Virtual Machines
 
-Azure virtual machines have two distinct names: resource name and host name. When you deploy a virtual machine, the same value is used for both names. The restrictions regarding the name maxlimit characters are for the host name. The actual resource name can have up to 64 characters (Linux based VMs) and up to 15 characters (Windows Based VMs). VM names for htss organization will have maximum of 15 characters (no matter the base layer OS) for symmetry, management and governance (ADDS, AAD, SCCM, Intune, etc) purposes and we're going to stick to the conditions below.
+Azure virtual machines have two distinct names: resource name and hostname. When you deploy a virtual machine, the same value is used for both names. The restrictions regarding the name max limit characters are for the host name. The actual resource name can have up to 64 characters (Linux-based VMs) and up to 15 characters (Windows Based VMs). VM names for htss organization will have a  maximum of 15 characters (no matter the base layer OS) for symmetry, management and governance (ADDS, AAD, SCCM, Intune, etc) purposes and we're going to stick to the conditions below.
 
 __Contitions:__
-- Only standard english alphanumeric characters
+- Only standard English alphanumeric characters
 - Strictly lowercase in all main parent resource types
 - Can't use spaces, control characters, or these characters:
 >- `~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \ | ; : . ' " , < > / ?`
 - Length is 15 characters max
-- Abbbreviations will be consumed from [2.6 VM type enumerations](#user-content-2.6-vm-type-enumerations)
-- Each naming order will have limited number of characters as shown in example table below
+- Abbreviations will be consumed from [2.6 VM type enumerations](#user-content-2.6-vm-type-enumerations)
+- Each naming order will have a limited number of characters as shown in the example table below
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
@@ -671,15 +671,15 @@ ___
 
 #### 3.4.4 Storage accounts
 
-Storage account family do not follow generic pattern as they have naming length restrictions imposed by Microsoft. Global scoped Storage Accounts must be 24 characters. Given this condition we are going to apply the same naming policies for storage resources in the following table.
+Storage account families do not follow generic pattern as they have naming length restrictions imposed by Microsoft. Global scoped Storage Accounts must be 24 characters. Given this condition, we are going to apply the same naming policies for storage resources in the following table.
 
 __Contitions:__
-- Only standard english alphanumeric characters
+- Only standard English alphanumeric characters
 - Strictly lowercase in all resource types
 - Can't use spaces, control characters, or these characters:
 >- `~ ! @ # $ % ^ & * ( ) = + _ [ ] { } \ | ; : . ' " , < > / ?`
 - Length is 24 characters max
-- Each naming order will have limited number of characters as shown in example table below
+- Each naming order will have a limited number of characters as shown in the example table below
 
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
@@ -722,12 +722,14 @@ ___
 
 See [__Azure Container Registry__](#excr).
 
+___
+
 #### 3.4.7 Dependent resources
 
 The dependent resources will follow a __different pattern__ that will be described more, with examples, in the following chapter.
-From the parent name of the resource we will only use the resource type (except VMs), project defined field, environment and instance count followed by delimiter `-` and it's type of resource using __uppercase characters__.
+From the parent name of the resource we will only use the resource type (except VMs), project-defined field, environment and instance count followed by delimiter `-` and its type of resource using __uppercase characters__.
 
-We are planning on deploying VM with naming convention `czlsnemc1webp01` and we want to add dependent resources to it, such as disks, nic, public IPs, etc. For VMs we will only take into consideration as name, the project defined field, environment and instance count from it's parent name followed by `-` delimiter and it's type of resource.
+We are planning on deploying VM with naming convention `czlsnemc1webp01` and we want to add dependent resources to it, such as disks, nic, public IPs, etc. For VMs we will only take into consideration as name, the project-defined field, environment and instance count from it's parent name followed by `-` delimiter and its type of resource.
 
 czlsnemc1**webp01**
 osDisk: webp01-__OS-DISK001__
@@ -736,18 +738,18 @@ dataDisk2: webp01-__DATA-DISK002__
 nic: webp01-__NIC001__
 pip: webp01-__PIP001__
 
-Let's asume we have a storage account named `rostnedrmphoebep001` that relies on private endpoint connection - the private endpoint is considered to be the storage account's child's resource, so the name for private endpoint in this scenario will be:
+Let's assume we have a storage account named `rostnedrmphoebep001` that relies on a private endpoint connection - the private endpoint is considered to be the storage account's child's resource, so the name for private endpoint in this scenario will be:
 
 `stphoebep001`__-PEP001__
 
-A different case is when the dependent resource is having a parent that is named after the generic pattern such as a Azure SQL Server named `gl-sql-ne-shared-phoebe-prod001` that needs a private endpoint connection. For this scenario we are going to take the same values along with it's delimiters included. Example:
+A different case is when the dependent resource is having a parent that is named after the generic pattern such as an Azure SQL Server named `gl-sql-ne-shared-phoebe-prod001` that needs a private endpoint connection. For this scenario, we are going to take the same values along with its delimiters included. Example:
 
 `sql-phoebe-prod001`__-PEP001__
 
 
 ##### 3.4.7.1 VM Associations
 
-Resources that are attached/associated to VMs are being treated as dependent resources and needs to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources written with __upper case letters__. For the examples on VM associations we will have a VM name to use `rowsnesh5cslp02`.
+Resources that are attached/associated to VMs are being treated as dependent resources and need to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources written with __upper case letters__. For the examples on VM associations, we will have a VM name to use `rowsnesh5cslp02`.
 
 ###### 3.4.7.1.1 Disks
 
@@ -772,7 +774,7 @@ VM Name: `rowsnesh5cslp02`
 
 ###### 3.4.7.1.3 Public IPs
 
-Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resouce to another. For this specific case we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to it's original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reservered for several reasons, the recommendation is to use the generic pattern.
+Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resource to another. For this specific case, we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to its original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reserved for several reasons, the recommendation is to use the generic pattern.
 
 - Standalone [PIP using generic pattern](#pip)
 
@@ -780,7 +782,7 @@ Public IPs can also be a dependent resource as well as a standalone resource tha
 `gl-pip-ne-drm-phoebe-prod001`
 `gl-pip-ne-ame-phoebe-dev003`
 
-- Dependent PIP using defined pattern for dependent resources
+- Dependent PIP using the defined pattern for dependent resources
 
 VM Name: `rowsnesh5cslp02`
 `cslp02`-__PIP001__
@@ -793,7 +795,7 @@ Load Balancer: `gl-lb-ne-drm-phoebe-prod001`
 Application Gateway: ro-agw-ne-edu-phoebe-prod001
 `agw-phoebe-prod001`__-PIP001__
 
-##### 3.4.7.2 Private endpoints
+##### 3.4.7.2 Private Endpoints
 
 - Storage Account: `glstnedrmphoebep001`
 __`stphoebep001`-PEP001__
@@ -804,8 +806,8 @@ __`kvphoebep001`-PEP001__
 - Databases: `gl-sql-ne-shared-phoebe-prod001`
 __`sql-phoebe-prod001`-PEP001__
 
-___NOTE:___ If the abbreviation for the dependent resources are present in the official [Azure Abbreviations for resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) it is mandatory to use it inside generated names. (e.g. - pip, pep, pl, etc)
-For instance DNS Groups that do not have an abbreviation, we can use `-DNSG`. There are also cases in which the abbreviations does not exist so we have the freedom to compose our own and define it in the table below:
+___NOTE:___ If the abbreviation for the dependent resources is present in the official [Azure Abbreviations for resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) it is mandatory to use it inside generated names. (e.g. - pip, pep, pl, etc)
+For instance, DNS Groups that do not have an abbreviation, we can use `-DNSG`. There are also cases in which the abbreviations do not exist so we have the freedom to compose our own and define it in the table below:
 
 |__Resource type__|__Custom abbreviation__|
 |--|--|
@@ -818,7 +820,7 @@ ___
 
 ### 4.0 Tagging strategy
 
-Tags will be applied to __all resources__. Mandatory tags needs to be applied to every resources. Optional tags can be added in addition to the mandatory ones, as needed. Tagging strategy for mandatory tags is being described in the table below:
+Tags will be applied to __all resources__. Mandatory tags need to be applied to every resource. Optional tags can be added in addition to the mandatory ones, as needed with no restrictions. Tagging strategy for mandatory tags is described in the table below:
 
 |__Tag Key__|__Value Format__|__Example__|__Mandatory__|
 |--|--|--|--|
@@ -892,8 +894,6 @@ __Others__
 We are integrating our definition of naming convention with Microsoft references regarding this topic. We rely our abbreviations on Microsoft's examples to which we added some small exceptions while also taking into consideration the length limit and character restrictions.
 
 ____
-
-
 
 
 
