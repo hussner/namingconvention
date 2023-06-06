@@ -4,7 +4,7 @@
 
 The naming standard includes HTSS corporate part and recommended [Microsoft Naming](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming) standards.
 
-The naming convention defines standard names for devices, components and resources connected to the network in HTSS and is mandatory for all resource entities in holding. This document will introduce our implementation with examples.
+The naming convention defines standard names for devices, components and resources connected to the Azure network in HTSS tenant and is mandatory for all resource entities in holding. This document will introduce our implementation with examples.
 
 An effective naming convention consists of resource names from important information about each resource. A good name helps you quickly identify the resource's type, associated workload, environment, and the Azure region hosting it.
 
@@ -141,6 +141,7 @@ __Exceptions__ will have a dedicated naming convention, because of name length l
 >- __Storage Accounts__
 >- __Key Vaults__
 >- [__Azure Container Registry__](#excr)
+>- __Dependent resources (Disks, NICs, Private Endpoints, etc)__
 
 This table is valid as __generic pattern__ and it can be used for __AI + machine learning, Analytics and IoT, Compute and Web, Containers, Databases, Integration, Management and governance, Networking and other remaining topics__:
 
@@ -156,10 +157,15 @@ This table is valid as __generic pattern__ and it can be used for __AI + machine
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project, application or service | `yes` | letters and numbers | `phoebe` | Unique name of a project, application, or service that the resource is a part of. |
 | \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
-| \#12| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
+| \#12 | Delimiter |  | 1 dash | `-` |  |
+| \#13 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` | The stage of the development lifecycle for the workload that the resource supports. |
+| \#14| Instance | `yes` | number | `001` | The instance count for a specific resource to identify more than one resource that has the same naming convention. |
 
-__`gl-rg-ne-drm-phoebe-prod001`__
+__`gl-rg-ne-drm-phoebe-databases-prod001`__
+__`gl-rg-ne-drm-phoebe-k8s-prod001`__
+__`gl-rg-ne-drm-phoebe-webapps-prod001`__
+__`gl-rg-ne-drm-phoebe-networking-prod001`__
 __`gl-mysql-ne-ame-phoebe-prod001`__
 __`gl-aks-ne-shared-phoebe-prod001`__
 
@@ -179,9 +185,11 @@ In the following example, tables can be found with the most common resources and
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#12 | Instance | `yes` | number | `001` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
+| \#12 | Delimiter |  | 1 dash | `-` |  |
+| \#13 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#14 | Instance | `yes` | number | `001` | 
 
 __`gl-mlw-ne-shared-phoebe-prod001`__
 
@@ -212,6 +220,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -273,6 +283,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -326,6 +338,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -368,9 +382,11 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#10 | Delimiter |  | 1 dash | `-` |  |
-| \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
-| \#12 | Instance | `yes` | number | `001` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
+| \#12 | Delimiter |  | 1 dash | `-` |  |
+| \#13 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
+| \#14 | Instance | `yes` | number | `001` | 
 
 __`gl-sql-ne-shared-phoebe-prod001`__
 __`gl-sqldb-ne-drm-phoebe-prod001`__
@@ -418,6 +434,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
@@ -455,6 +473,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
@@ -500,6 +520,8 @@ ___
 | \#7 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
@@ -577,6 +599,8 @@ ___
 | \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `shared` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
@@ -626,6 +650,8 @@ _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subsc
 | \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `drm` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
+| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
