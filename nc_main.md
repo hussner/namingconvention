@@ -111,7 +111,7 @@ __[Full ISO 3166 Country Codes](https://www.iso.org/obp/ui/#search)__
 | Darevo | `drv` |
 | EduNet | `edn` |
 | Brahms | `brh` |
-| Multiple Clients/Managed service| `shared`|
+| Multiple Clients/Managed service| `shared` or `shr`|
 | TBD | 
 
 ## 3.0 Patterns
@@ -191,6 +191,7 @@ In the following example, tables can be found with the most common resources and
 | \#13 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#14 | Instance | `yes` | number | `001` | 
 
+__`gl-srch-ne-htss-phoebe-ai-prod001`__
 __`gl-mlw-ne-shared-phoebe-prod001`__
 
 <details>
@@ -226,8 +227,8 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`gl-adf-ne-shared-phoebe-prod001`__
-__`gl-hadoop-ne-drm-phoebe-dev001`__
+__`gl-adf-ne-shared-phoebe-store-prod001`__
+__`gl-hadoop-ne-drm-phoebe-dataset-dev001`__
 __`cz-iot-we-drm-phoebe-test001`__
 
 <details>
@@ -289,11 +290,11 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`ro-func-ne-shared-phoebe-dev001`__
-__`gl-app-ne-drm-phoebe-prod001`__
-__`gl-asp-ne-shared-phoebe-prod001`__
-__`pl-ase-ne-htss-phoebe-test001`__
-__`gl-gal-ne-drm-phoebe-prod012`__
+__`ro-func-ne-shared-phoebe-api-dev001`__
+__`gl-app-ne-drm-phoebe-php-prod001`__
+__`gl-asp-ne-shared-phoebe-nodejs-prod001`__
+__`pl-ase-ne-htss-phoebe-asp-test001`__
+__`gl-gal-ne-drm-phoebe-linux-prod012`__
 
 <details>
 <summary>
@@ -344,12 +345,13 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`gl-aks-ne-shared-phoebe-prod001`__
-__`ro-ca-ne-drm-phoebe-test002`__
+__`gl-aks-ne-shared-phoebe-star-prod001`__
+__`ro-ca-ne-drm-phoebe-default-test002`__
 __`gl-aks-ne-htss-phoebe-dev003`__
 __`bg-ci-we-ame-phoebe-uat005`__
 
 <a id="excr"></a>__Except Azure Container Registry, supports only Alphanumeric characters (no hyphens)__, we are simply removing the hyphens:
+__`glcrnedrmphoebek8sprod001`__
 __`glcrwesharedphoebeprod004`__
 
 <details>
@@ -388,8 +390,10 @@ ___
 | \#13 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#14 | Instance | `yes` | number | `001` | 
 
+__`gl-sql-ne-shared-phoebe-webapps-prod001`__
+__`gl-sql-ne-shared-phoebe-infra-prod001`__
 __`gl-sql-ne-shared-phoebe-prod001`__
-__`gl-sqldb-ne-drm-phoebe-prod001`__
+__`gl-sqldb-ne-drm-phoebe-webapps-prod001`__
 __`gl-mysql-ne-ame-phoebe-dev003`__
 
 <details>
@@ -440,7 +444,8 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-sbq-ne-shared-phoebe-prod001`__
+__`gl-sb-ne-shared-phoebe-topic-prod001`__
+__`gl-sbq-ne-shared-phoebe-qs-prod001`__
 
 <details>
 <summary>
@@ -479,8 +484,12 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-appi-ne-shared-phoebe-prod001`__
+__`gl-appi-ne-shared-phoebe-vms-prod001`__
+__`gl-appi-ne-shared-phoebe-k8s-prod001`__
+__`gl-appi-ne-shared-phoebe-webapps-prod001`__
 __`ro-law-ne-drm-phoebe-test003`__
+__`ro-law-ne-drm-phoebe-k8s-test003`__
+__`gl-law-ne-shared-phoebe-sqldb-prod001`__
 __`pl-rg-ne-ame-phoebe-dev005`__
 
 <details>
@@ -526,11 +535,15 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
-__`gl-vnet-ne-shared-phoebe-prod001`__
-__`gl-lbi-ne-drm-phoebe-prod001`__
-__`cz-snet-ne-ame-phoebe-dev003`__
-__`gl_pip_ne_htss-phoebe-prod005`__
-__`ro-nsg-ne-edu-phoebe-prod001`__
+__`gl-vnet-ne-shared-phoebe-webapps-prod001`__
+__`gl-lb-ne-drm-phoebe-infra-prod001`__
+__`cz-snet-ne-ame-phoebe-web-dev003`__
+__`cz-snet-ne-ame-phoebe-mysql-dev003`__
+__`gl-snet-ne-ame-phoebe-st-dev003`__
+__`gl_pip_ne_htss-phoebe-lb-prod005`__
+__`gl_pip_ne_htss-phoebe-vm-prod001`__
+__`ro-nsg-ne-edu-phoebe-snet-prod001`__
+__`ro-nsg-ne-edu-phoebe-nic-prod001`__
 __`gl-udr-ne-drm-phoebe-test002`__
 
 <details>
@@ -605,7 +618,9 @@ ___
 | \#11 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12 | Instance | `yes` | number | `001` | 
 
-__`gl-vcn-ne-shared-phoebe-prod001`__
+__`gl-vcn-ne-shared-phoebe-infra-prod001`__
+__`gl-id-ne-drm-phoebe-sqldb-prod001`__
+__`gl-id-ne-drm-phoebe-st-prod001`__
 ___
 
 #### 3.3.10 Others [ * ]
@@ -635,7 +650,7 @@ ___
 
 #### 3.4.2 Subscriptions
 
-Unlike the general pattern, Subscriptions needs to have different identification in it's name that is described and shown in the table below:
+Unlike the general pattern, Subscriptions needs to have different identification (#5 - Billing license enumeration) in it's name that is described and shown in the table below:
 
 _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subscriptions naming convention_
 
@@ -650,14 +665,15 @@ _* general [conditions](#user-content-3.1-conditions%3A) are propagated to Subsc
 | \#7 | Customer | `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | `drm` | 
 | \#8 | Delimiter |   | 1 dash | `-` |  |
 | \#9 | Project | `yes` | letters and numbers | `phoebe` | 
-| \#10 | Delimiter1 |  | 1 dash | `-` |  |
+| \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Role, Function or Context name | __`no`__ | letters and numbers | `k8s`<br>`vms`<br>`web`<br>`networking`<br>`databases`<br>`webapps`<br>`infra`<br>`ionut` <br> `...` | An __optional__  context that  identifies or defines some characteristics of the deployment.|
 | \#10 | Delimiter |  | 1 dash | `-` |  |
 | \#11 | Environment | `yes` | [2.5 Environment enumeration](#user-content-2.5-environment-enumerations) long form | `prod` |
 | \#12| Instance | `yes` | number | `001` | 
 
+__`gl-sub-ea-drm-phoebe-infra-prod001`__
 __`gl-sub-ea-htss-phoebe-prod001`__
-__`ro-sub-csp-drm-phoebe-test001`__
+__`cz-sub-csp-drm-phoebe-test001`__
 __`gl-sub-mca-ame-phoebe-dev001`__
 __`gl-sub-ea-shared-phoebe-prod001`__
 
@@ -683,7 +699,7 @@ __Contitions:__
 | \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
 | \#4 | Project short form | `yes` | [2.8 Project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
 | \#5 | Project count | `yes` | numeric string | 1 | `1` |
-| \#6 | Role short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
+| \#6 | Role, function or context - short form | `yes` | [service/roles enumeration](#user-content-2.9-service/roles-enumerations) | 3 | __`rmq`__ | 
 | \#7 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
 | \#8| Instance count | `yes` | numeric string | 2 | `01` | 
 
@@ -710,17 +726,18 @@ __Contitions:__
 | __Order__ | __Meaning__ | __Required__ | __Format__ | __Characters__| __Example__ |
 |--|--|--|--|--|--|
 | \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
-| \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `stdiag` |
+| \#2 | (Common) Resource types | `yes` | `st` - Storage Account<br>`stdiag` - Storage Account for diagnostic logs<br> `ssimp` -  Azure StorSimple<br> `dla` - Data Lake Analytics<br> `dls` - Data Lake Storage Account<br> `savm` - Virtual Machine Storage account<br>`bvault` - Backup Vault Name<br> `bkpol` - Backup Vault Policy<br>`share` - File Share | 2-6 | `st` |
 | \#3 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-6|  `shared` | 
-| \#5 | Project | `yes` | letters and numbers | 4-11 | __`phoe`__ | 
-| \#6 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#7| Instance | `yes` | number | 3 | `001` | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-4 |  `shr` | 
+| \#5 | Project short form | `yes` | [2.8 Project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
+| \#6 | Role, Function or Context name | __`no`__ |  string |min: 4<br> max: 9 | `smb`<br>`table`<br>`blobs`<br>`nfs`<br>`logs`<br>`...`
+| \#7 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#8| Instance | `yes` | number | 3 | `001` | 
 
-__`glstdiagnesharedphoep001`__
-__`glstnedrmphoebep001`__
-__`rostdiagnesharedphoet012`__
-__`czdlanedrmphoebed003`__
+__`glstneshrpsblobsp001`__
+__`glstnehtsspsnfsp001`__
+__`glstnedrmpssmbp001`__
+__`rostnedrmpslogst002`__
 
 ___
 
@@ -732,16 +749,16 @@ Key Vaults are following the same conditions as [Storage Accounts](#user-content
 |--|--|--|--|--|--|
 | \#1 | Country Code | `yes` | [2.3 Country Code enumerations - ISO-3166 alpha 2](#user-content-2.3-country-enumerations---iso-3166-alpha-2) | 2 | `gl` | 
 | \#2 | (Common) Resource types | `yes` | `kv` - Key Vault | 2 | `kv` |
-| \#3 | Location | `yes` | [enumeration](#user-content-2.4-location-enumerations) | 2 | `ne` | 
-| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-6|  `shared` | 
-| \#4 | Project | `yes` | letters and numbers | 8-11 | `phoebe` | 
-| \#5 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
-| \#6| Instance | `yes` | number | 3 | `001` | 
+| \#3 | Location | `yes` | [2.4 Location enumerations](#user-content-2.4-location-enumerations) | 2 | `ne` | 
+| \#4 | Customer| `yes` | [2.10 Customer/Client enumerations](#user-content-2.10-customer/client-enumerations) | 3-4 |  `shr` | 
+| \#5 | Project short form | `yes` | [2.8 Project enumeration](#user-content-2.8-project-enumerations) | 2 | __`ps`__ |
+| \#6 | Role, Function or Context name | __`no`__ |  string |min: 4<br> max: 9 | `secrets`<br>`keys`<br>`certs`<br>`mixed`<br>`star`<br>`...`
+| \#7 | Environment | `yes` | [2.5 Environment enumerations](#user-content-2.5-environment-enumerations) short form | 1 | `p` |
+| \#8| Instance | `yes` | number | 3 | `001` | 
 
-__`glkvnesharedphoebep001`__
-__`cskvnedrmphoebed003`__
-__`iakvneamephoebet002`__
-
+__`glkvneshrpscertsp001`__
+__`glkvnedrmpsstarp001`__
+__`glkvnehtssmcmixedp001`__
 ___
 
 #### 3.4.6 Azure Container Registries
@@ -752,87 +769,61 @@ ___
 
 #### 3.4.7 Dependent resources
 
-The dependent resources will follow a __different pattern__ that will be described more, with examples, in the following chapter.
-From the parent name of the resource we will only use the resource type (except VMs), project-defined field, environment and instance count followed by delimiter `-` and its type of resource using __uppercase characters__.
+The dependent resources will follow a completely __different pattern__ that will be described more, with examples, in the following chapter.
+Parent's resource & Dependent Resource types will be written using __uppercase__ characters. Also, for dependent resources __long form of enumerations will be used by default__.<br>
 
-We are planning on deploying VM with naming convention `czlsnemc1webp01` and we want to add dependent resources to it, such as disks, nic, public IPs, etc. For VMs we will only take into consideration as name, the project-defined field, environment and instance count from it's parent name followed by `-` delimiter and its type of resource.
+From the parent name of the resource we will only use the some of the original characteristics as shown in table below with preliminary/unexplained examples:
 
-czlsnemc1**webp01**
-osDisk: webp01-__OS-DISK001__
-dataDisk1: webp01-__DATA-DISK001__
-dataDisk2: webp01-__DATA-DISK002__
-nic: webp01-__NIC001__
-pip: webp01-__PIP001__
+|[optional]__Role, Function or Context name__|-|__Project__|-|__Environment__|[parent]__Instance Count__|-|__Resource Type__|-|__Dependent Resource Type__|[dependent_resource]__Instance Count__|
+|--|--|--|--|--|--|--|--|--|--|--|
+|infra|-|phoebe|-|prod|001|-|LB|-|PIP|001|
+|webapps|-|phoebe|-|prod|001|-|SQL|-|PEP|001|
+|csl|-|phoebe|-|prod|001|-|LS|-|OSDISK|001|
 
-Let's assume we have a storage account named `rostnedrmphoebep001` that relies on a private endpoint connection - the private endpoint is considered to be the storage account's child's resource, so the name for private endpoint in this scenario will be:
+Going deeper into understanding this pattern, we are going to specify naming examples for common resources use cases.
 
-`stphoebep001`__-PEP001__
+- Virtual Machines - Dependent resources
 
-A different case is when the dependent resource is having a parent that is named after the generic pattern such as an Azure SQL Server named `gl-sql-ne-shared-phoebe-prod001` that needs a private endpoint connection. For this scenario, we are going to take the same values along with its delimiters included. Example:
+|__Parent Resource Name__|__osDisk__|__dataDisk__|__networkInterface__|__publicIP__|
+|--|--|--|--|--|
+|`gllsnemc1cslp01`|`csl-mindclass-prod001-LS-OSDISK001`|`csl-mindclass-prod001-LS-DATADISK001`|`csl-mindclass-prod001-LS-NIC001`|`csl-mindclass-prod001-LS-PIP001`|
+|`glwsneps1rmqp01`|`rmq-poseidon-prod001-WS-OSDISK001`|`rmq-poseidon-prod001-WS-DATADISK001`|`rmq-mindclass-prod001-WS-NIC001`|`csl-mindclass-prod001-WS-PIP001`|
 
-`sql-phoebe-prod001`__-PEP001__
+_* snapshots will inherit the dependent resource name followed by it's proprietary suffix: `-SNAP001`._
+eg: `rmq-poseidon-prod001-WS-DATADISK001-SNAP001`
+
+- Storage Account, Container Registry, Key Vaults - Dependent resources
+
+|__Parent Resource Name__|__privateEndpoint__|
+|--|--|
+|__Storage Account__|
+|`glstneshrpsblobsp001`|`blobs-poseidon-prod001-ST-PEP001`|
+|`glstnehtsspsnfsp001`|`nfs-poseidon-prod001-ST-PEP001`|
+|__Container Registry__|
+|`glcrnedrmphoebek8sprod001`|`k8s-phoebe-prod001-CR-PEP001`
+|`glcrwesharedphoebewebappsprod004`|`webapps-phoebe-prod004-CR-PEP001`|
+|__Key Vaults__|
+|`glkvneshrpscertsp001`|`certs-poseidon-prod001-KV-PEP001`|
+|`glkvnehtssmcmixedp001`|`mixed-mindclass-prod001-KV-PEP001`|
+
+- SQL Server, Redis, WebApps - Dependent Resources
+
+|__Parent Resource Name__|__privateEndpoint__|
+|--|--|
+|__SQL Server__|
+|`gl-sql-ne-shared-phoebe-webapps-prod001`|`webapps-phoebe-prod001-SQL-PEP001`|
+|`gl-sql-ne-drm-phoebe-infra-test003`|`infra-phoebe-test003-SQL-PEP001`|
+|__Redis__|
+|`gl-redis-ne-htss-phoebe-web-prod001`|`web-phoebe-prod001-REDIS-PEP001`|
+|`cz-redis-ne-drm-phoebe-star-prod001`|`star-phoebe-prod001-REDIS-PEP001`|
+|__WebApps__|
+|`gl-app-ne-drm-phoebe-php-prod001`|`php-phoebe-prod001-APP-PEP001`|
+|`gl-asp-ne-shared-phoebe-nodejs-prod001`|`nodejs-phoebe-prod001-ASP-PEP001`|
 
 
-##### 3.4.7.1 VM Associations
 
-Resources that are attached/associated to VMs are being treated as dependent resources and need to have good visibility especially when you are reading the information from IaC deployment type of files. We are going to have all child (dependent) resources written with __upper case letters__. For the examples on VM associations, we will have a VM name to use `rowsnesh5cslp02`.
-
-###### 3.4.7.1.1 Disks
-
-VM Name: `rowsnesh5cslp02`
-`cslp02`-__OS-DISK001__
-`cslp02`-__DATA-DISK001__
-`cslp02`-__DATA-DISK002__
-
-###### 3.4.7.1.2 Snapshots
-
-VM Name: `rowsnesh5cslp02`
-`cslp02`-__OS-DISK001-SNAP001__
-`cslp02`-__DATA-DISK001-SNAP001__
-`cslp02`-__DATA-DISK002-SNAP001__
-
-###### 3.4.7.1.2 Network Interface Card
-
-VM Name: `rowsnesh5cslp02`
-`cslp02`-__NIC001__
-`cslp02`-__NIC002__
-`cslp02`-__NIC003__
-
-###### 3.4.7.1.3 Public IPs
-
-Public IPs can also be a dependent resource as well as a standalone resource that can be moved from one resource to another. For this specific case, we're gonna also have available the standalone form that will follow the generic pattern as well as the pattern for it as a dependent resource presented in this chapter. Because we defined a pattern for dependent resources, a Public IP which is known for it's lifecycle to be strongly tied to its original resource, can be defined using this pattern. In rare cases in which the public IP is needed to be reserved for several reasons, the recommendation is to use the generic pattern.
-
-- Standalone [PIP using generic pattern](#pip)
-
-`gl-`__pip__`-ne-shared-phoebe-prod001`
-`gl-pip-ne-drm-phoebe-prod001`
-`gl-pip-ne-ame-phoebe-dev003`
-
-- Dependent PIP using the defined pattern for dependent resources
-
-VM Name: `rowsnesh5cslp02`
-`cslp02`-__PIP001__
-`cslp02`-__PIP002__
-`cslp02`-__PIP003__
-
-Load Balancer: `gl-lb-ne-drm-phoebe-prod001`
-`lb-phoebe-prod001`__-PIP001__
-
-Application Gateway: ro-agw-ne-edu-phoebe-prod001
-`agw-phoebe-prod001`__-PIP001__
-
-##### 3.4.7.2 Private Endpoints
-
-- Storage Account: `glstnedrmphoebep001`
-__`stphoebep001`-PEP001__
-
-- Key Vault: `glkvnesharedphoebep001`
-__`kvphoebep001`-PEP001__
-
-- Databases: `gl-sql-ne-shared-phoebe-prod001`
-__`sql-phoebe-prod001`-PEP001__
-
-___NOTE:___ If the abbreviation for the dependent resources is present in the official [Azure Abbreviations for resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) it is mandatory to use it inside generated names. (e.g. - pip, pep, pl, etc)
+__NOTES:__ 
+1. If the abbreviation for the dependent resources is present in the official [Azure Abbreviations for resource types](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations) it is mandatory to use it inside generated names. (e.g. - pip, pep, pl, etc)
 For instance, DNS Groups that do not have an abbreviation, we can use `-DNSG`. There are also cases in which the abbreviations do not exist so we have the freedom to compose our own and define it in the table below:
 
 |__Resource type__|__Custom abbreviation__|
@@ -842,6 +833,19 @@ For instance, DNS Groups that do not have an abbreviation, we can use `-DNSG`. T
 |Virtual Link| `-VLINK001`|
 |TBD|
 
+2. For resources that are lacking the Role, Function or Context name, the same pattern will be applied ignoring the missing field.
+
+3. Public IPs resource type can be:
+>- standalone - will use the generic pattern; publicIP needs to be reserved in some cases and, for instance, it's association can be changed from NIC to LB
+__`gl-pip-ne-htss-phoebe-web-prod001`__
+
+>- dependent - will use the Dependent Resource Pattern
+
+|__Parent Resource Name__|__publicIP__|
+|--|--|
+|__Load Balancer__|
+|`gl-lb-ne-drm-phoebe-infra-prod001`|`infra-phoebe-prod001-LB-PIP001`|
+|`ro-lb-ne-htss-phoebe-csl-dev016`|`csl-phoebe-dev016-LB-PIP001`|
 ___
 
 ### 4.0 Tagging strategy
@@ -867,14 +871,14 @@ ____
 
 ### 5.0 Summary
 
-Most of the Azure resources in HTSS org will use and rely on the general (aka generic pattern). The principal aim of the naming convention is to give us as much information as possible just by reading the name of that specific resource. 
+In conclusion, the implementation of this comprehensive naming convention logic for Azure provides a solid foundation for organizing and managing resources within our cloud environment. By adhering to these standardized guidelines, we can streamline operations, enhance visibility, and ensure consistent naming practices across our Azure infrastructure. This approach promotes clarity, scalability, and collaboration among teams, empowering us to maximize the benefits of Azure's capabilities while minimizing potential complexities. As we move forward, let us embrace this naming convention as a valuable tool in our pursuit of optimized cloud management and continued success in the ever-evolving digital landscape.
 
 #### 5.1 Generic pattern overview:
 
-|__gl__|-|__sql__|-|__ne__|-|__shared__|-|__phoebe__|-|__prod__|__001__|
-|--|--|--|--|--|--|--|--|--|--|--|--|
-|Country Code|-|Resource type|-|Azure Region|-|Customer|-|Project|-|Env type|Instance count|
-|Global Serice|-|SQL Server|-|North Europe|-|shared managed service|-|Phoebe Project|-|Productive System|Instance 001|
+|__gl__|-|__sql__|-|__ne__|-|__shared__|-|__phoebe__|-|__webapp__|-|__prod__|__001__|
+|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
+|Country Code|-|Resource type|-|Azure Region|-|Customer|-|Project|-|Context, Role, Function|-|Env type|Instance count|
+|Global Serice|-|SQL Server|-|North Europe|-|shared managed service|-|Phoebe Project|-|WebApp connects to it|-|Productive System|Instance 001|
 
 
 #### 5.2 Limited characters pattern overview:
@@ -887,39 +891,32 @@ __VM__
 
 __Others__
 
-|__gl__|__st__|__ne__|__drm__|__phoebe__|__p__|__001__|
-|--|--|--|--|--|--|--|
-|Global Service|Storage Account|North Europe|DrMax Customer|Phoebe Project|Production|Instance 001|
-|2|2-6|2|3-6|4-11|1|3|
+|__gl__|__st__|__ne__|__drm__|__ps__|__blobs__|__p__|__001__|
+|--|--|--|--|--|--|--|--|
+|Global Service|Storage Account|North Europe|DrMax Customer|Poseidon Project|blobs|Production|Instance 001|
+|2|2-6|2|3-4|2|4-9|1|3|
 
-|__gl__|__kv__|__we__|__shared__|__phoebe__|__p__|__001__|
-|--|--|--|--|--|--|--|
-|Global Service|Key Vault|West Europe|shared managed service|Phoebe Project|Production|Instance 001|
-|2|2|2|3-6|8-11|1|3|
+|__gl__|__kv__|__we__|__shr__|__ps__|__certs__|__p__|__001__|
+|--|--|--|--|--|--|--|--|
+|Global Service|Key Vault|West Europe|Shared Service|Poseidon Project|hosting Certficates|Production|Instance 001|
+|2|2|2|3-4|2|8-9|1|3|
 
 #### 5.3 Dependent Resources pattern overview
-- Dependent Resources for VMs pattern
 
-|~~gl~~|~~ls~~|~~ne~~|~~ps~~|~~1~~|__rmq__|__p__|__01__|-|PIP|001|
-|--|--|--|--|--|--|--|--|--|--|--|
-|N/A|N/A|N/A|N/A|N/A|Service/Role|Production|Resource Instance Count|-|Private Endpoint|Instance Count|
+|__csl__|-|__phoebe__|-|__prod__|-|__LS__|-|__OSDISK001__|
+|--|--|--|--|--|--|--|--|--|
+|Context, Role or Function|-|Project|-|Env|-|Parent Resource type|-|Dependent Resource type|
+|Consul|-|Project Phoebe|-|Productive system|-|Linux Server|-|disk hosting OS|
 
-- Dependent Resources for limited characters resources pattern
-
-|~~gl~~|st|~~ne~~|~~drm~~|__phoebe__|__p__|__001__|-|PEP|001|
-|--|--|--|--|--|--|--|--|--|--|
-|N/A|Storage Account|N/A|N/A|Phoebe Project|Productive system|Instance 001|-|Private Endpoint|Count|
-
-- Dependent Resources for Generic pattern
-
-|~~gl~~|~~-~~|__sql__|~~-~~|~~ne~~|~~-~~|~~shared~~|~~-~~|__phoebe__|__-__|__prod__|__001__|__-__|__PEP__|__001__|
-|--|--|--|--|--|--|--|--|--|--|--|--|--|--|--|
-|N/A|N/A|SQL Server|N/A|N/A|N/A|N/A|N/A|Phoebe Project|-|Productive System|Instance Count|-|Private Endpoint|Instance Count|
-
-
-We are integrating our definition of naming convention with Microsoft references regarding this topic. We rely our abbreviations on Microsoft's examples to which we added some small exceptions while also taking into consideration the length limit and character restrictions.
+|__infra__|-|__phoebe__|-|__prod__|-|__LB__|-|__PIP001__|
+|--|--|--|--|--|--|--|--|--|
+|Context, Role or Function|-|Project|-|Env|-|Parent Resource type|-|Dependent Resource type|
+|Serves infrastructure|-|Project Phoebe|-|Productive Lifecycle|-|Parent is Load Balancer|-|Public IP|
 
 ____
+<br>
+Ta-daaa!
 
+<br>
 
-
+____
